@@ -1,0 +1,68 @@
+<div class="menu_genericas">
+
+<?php $lastCat = "none";?>
+<?php foreach ($genericas as $generica): ?>
+	<?php if($generica["catgenerica"] != $lastCat)
+		{
+			$lastCat == $generica["catgenerica"];
+			print_r($generica);
+		}
+	?>
+	<li>
+		<?php echo $generica["catgenerica"]["nombre"]?>
+	</li>
+<?php endforeach;?>
+
+
+	<?php for ($i = 0; $i < 5; $i++):?>
+		<div class="cols">
+			<h1>
+				Categoria 1
+			</h1>
+			<ul>
+				<li>
+					<a href="<?php echo url_for2('generica', array('id' => 'generica1') )?>">
+						Titulo de la seccion 1
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Titulo de la seccion 1
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Titulo de la seccion 1
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Titulo de la seccion 1
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Titulo de la seccion 1
+					</a>
+				</li>
+			</ul>
+		</div>
+	<?php endfor; ?>
+</div>
+
+
+
+<div class="publi_app">
+	<img src="/images/pruebas/home/publiapp.jpg" alt="publicidad app btag" /> 
+</div>
+
+<div id="publi_lat"> </div>
+
+<div id="footer">
+	<p>
+		Copyright © 2004-2012 Business Tag.  <br/>
+		Business Tag and related marks are registered trademarks of  Business Tag. <br/> 
+		All rights reserved. <br/>
+	</p>
+	<a id="iridian" href="http://www.iridian.co" target="_blank"></a>
+</div>

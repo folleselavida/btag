@@ -1,0 +1,10 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/07-Databases
+
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn:      mysql:host=internal-db.s127877.gridserver.com;dbname=db127877_aa
+      username: db127877
+      password: Iri-2508-Ago%

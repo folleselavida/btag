@@ -1,0 +1,16 @@
+<div class="col_registo shadow contenedor" id="new_p2">
+	<div class="titulo2">
+		<img src="/images/tags/btag2.png" alt="Paso1" />
+		<p>
+			Paso 2
+		</p>
+	</div>
+	
+	<div class="wrap_res_busq">
+		<h1>
+			Crea tu Nuevo Sitio
+		</h1>
+		<?php include_partial('newsite') ?>
+	</div>
+</div>
+

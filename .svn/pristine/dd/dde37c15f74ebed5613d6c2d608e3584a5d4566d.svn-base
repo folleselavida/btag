@@ -1,0 +1,54 @@
+<?php slot('categoria','active')?>
+<?php slot('descripcion','')?>
+<?php slot('keywords','')?>
+	
+<style>
+	#columna_izq {
+		visibility: <?php echo $colIzq ?> !important;
+	}
+	
+	#columna_der {
+		visibility: <?php echo $colDer ?> !important;
+	}
+</style>
+
+<div id="catecol1">
+	<div class="titulo2">
+		<img src="/images/tags/5s.png" alt="Review del día de business tag" />
+		<p>
+			Categorias
+		</p>
+	</div>
+	<div id="categorias2">
+		<?php include_partial('cate', array('li_cate' => $li_cate))?>
+	</div>
+</div>
+
+<div id="col_busq">
+	<div class="titulo2">
+		<img src="/images/tags/5s.png" alt="Review del día de business tag" />
+		<p>
+			Busca por Nombre ó Palabras Clave
+		</p>
+	</div>
+	<div id="cont_busq">
+		<form id="buscador">
+			<input type="text" />
+			<input type="submit" value="Buscar" />
+		</form>
+	</div>
+</div>
+
+<div id="col_res">
+	<div class="titulo2">
+		<img src="/images/tags/5s.png" alt="Review del día de business tag" />
+		<p id="titulo_resultados">
+			Resultados
+		</p>
+	</div>
+	<div id="cont_resultados">
+		<?php include_partial('resultados', array(
+			'coment' => $resultados
+		))?>
+	</div>
+</div>

@@ -1,0 +1,84 @@
+<div class="wrap_menu">
+	<ul id="menu" >
+		<li>
+			<a href="<?php echo url_for('crear_perfil') ?>">
+				Perfil
+			</a>
+		</li>
+		<li>
+			<a href="<?php echo url_for('registro') ?>">
+				Registro Empresarial
+			</a>
+		</li>
+		<li>
+			<a href="<?php echo url_for('categoria') ?>">
+				Sitios
+			</a>
+		</li>
+		<li>
+			<a href="<?php echo url_for('contacto') ?>">
+				Contáctenos
+			</a>
+		</li>
+	</ul>
+	
+	<ul id="idioma">
+		<li>
+			<a href="">
+				Español / 
+			</a>
+		</li>
+		<li>
+			<a href="">
+				English /
+			</a>
+		</li>
+		<li>
+			<a href="">
+				Frech /
+			</a>
+		</li>
+		<li>
+			<a href="">
+				Korean /
+			</a>
+		</li>
+	</ul>
+	
+<?php include_component("banner", "buscarsitiomenu")?>
+	
+	<form id="login" style="display:none;">
+		<fieldset>
+			<div class="col">
+			<label>
+				Email:
+			</label>
+			<input	type="text" />
+			<a class="olvidar"> ¿olvidaste tu contraseña? </a>
+		</div>
+		<div class="col">
+			<label>
+				Contraseña:
+			</label>
+			<input	type="password" />
+		</div>
+		<a href="" class="submit" style="margin-top: 18px">Ingresar</a>
+		</fieldset>
+	</form>
+	<div id="registered">
+		<div class="img">
+			<img src="/images/pruebas/home/perfil.jpg" alt="Fernando Caviedes" />
+		</div>
+		<p>
+			Fernando Caviedes
+		</p>
+		<a href="<?php echo url_for("sf_guard_signout")?>">
+			logout
+		</a>
+	</div>
+	
+	<a id="fbconnect"></a>
+	<a class="social" id="fb"></a>
+	<a class="social" id="plus"></a>
+	<a class="social" id="tw"></a>
+</div>

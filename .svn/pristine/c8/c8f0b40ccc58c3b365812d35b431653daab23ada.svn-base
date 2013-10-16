@@ -1,0 +1,17 @@
+<?php foreach($review as $rev):?>
+	<div class="reviews">
+		<img class="tag2" alt="tag business tag" src="/images/tags/<?php echo $rev[0] ?>s.png">
+		<p>
+			<a href="<?php echo url_for2('perfil', array('id' => 'fernando_caviedes' ) ) ?>">
+				Fernando Caviedes 
+			</a>
+			comento en:
+			<a href="<?php echo url_for2('sitio', array('id' => 'hamburgueseria' ) ) ?>" >
+				La Hamburguesería
+			</a>
+		</p>
+		<?php echo html_entity_decode($rev[6]) ?>
+	</div>
+<?php endforeach; ?>
+
+<a id="ver_rev" class="ver_mas" href="">ver mas</a>

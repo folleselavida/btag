@@ -1,0 +1,10 @@
+<ul class="cate">
+	<?php foreach($li_cate as $lista): ?>
+		<li>
+			<a href="">
+				<img src="/images/tags/<?php echo $lista[0]?>.png" alt="<?php echo $lista[1]?> business tag" />
+			</a>
+			<a href="" class="link"> <?php echo $lista[1]?> </a>
+		</li>
+	<?php endforeach; ?>
+</ul>

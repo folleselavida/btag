@@ -1,0 +1,158 @@
+categoria:
+  categoria_1:
+    nombre: Bares
+    logo: 5379_8184_bar.png
+    thumbnail: 7241_4342_1.jpg
+    ciudad: ciudad_1
+catgenerica:
+  catgenerica_1:
+    nombre: 'Sobre BTag'
+  catgenerica_2:
+    nombre: 'Para usuarios'
+  catgenerica_3:
+    nombre: 'Para empresas'
+  catgenerica_4:
+    nombre: Servicios
+  catgenerica_5:
+    nombre: Nosotros
+  catgenerica_6:
+    nombre: Normatividad
+  catgenerica_7:
+    nombre: FAQ
+ciudad:
+  ciudad_1:
+    nombre: Bogotá
+generica:
+  generica_1:
+    titulo: 'SubCat 1'
+    contenido: '<p>as dasd fasd fasd f</p>'
+    catgenerica: catgenerica_1
+  generica_2:
+    titulo: 'SubCat 2'
+    contenido: '<p>ads fasd fasd f</p>'
+    catgenerica: catgenerica_1
+  generica_3:
+    titulo: 'SubCat 1'
+    contenido: '<p>a sdfasd asd fasd f</p>'
+    catgenerica: catgenerica_2
+  generica_4:
+    titulo: 'SubCat 2'
+    contenido: '<p>asd fasd fasdf</p>'
+    catgenerica: catgenerica_2
+  generica_5:
+    titulo: 'SubCat 1'
+    contenido: '<p>asdf asdf asd f</p>'
+    catgenerica: catgenerica_3
+  generica_6:
+    titulo: 'SubCat 2'
+    contenido: '<p>asdfasd f</p>'
+    catgenerica: catgenerica_4
+  generica_7:
+    titulo: 'SubCat 2'
+    contenido: '<p>asd fasd f</p>'
+    catgenerica: catgenerica_6
+  generica_8:
+    titulo: 'SubCat 2'
+    contenido: '<p>afsd fasd</p>'
+    catgenerica: catgenerica_7
+sfGuardGroup:
+  sfGuardGroup_1:
+    name: admin
+    description: 'Administrator group'
+    created_at: '2012-09-18 11:07:55'
+    updated_at: '2012-09-18 11:07:55'
+sfGuardGroupPermission:
+  sfGuardGroupPermission_1_1:
+    Group: sfGuardGroup_1
+    Permission: sfGuardPermission_1
+    created_at: '2012-09-18 11:07:55'
+    updated_at: '2012-09-18 11:07:55'
+sfGuardPermission:
+  sfGuardPermission_1:
+    name: admin
+    description: 'Administrator permission'
+    created_at: '2012-09-18 11:07:55'
+    updated_at: '2012-09-18 11:07:55'
+sfGuardUser:
+  sfGuardUser_1:
+    first_name: John
+    last_name: Doe
+    email_address: john.doe@gmail.com
+    username: admin
+    algorithm: sha1
+    salt: dffb286e83ae9a49047fc991dc4dbeb3
+    password: f0c291a3edfe6f837c9e66f40f6f9760ec0c2a55
+    is_active: true
+    is_super_admin: true
+    last_login: '2012-09-21 16:30:20'
+    created_at: '2012-09-18 11:07:55'
+    updated_at: '2012-09-21 16:30:20'
+  sfGuardUser_2:
+    first_name: Will
+    last_name: Vlr
+    email_address: will.vlr@hotmail.com
+    username: will
+    algorithm: sha1
+    salt: 013acbb85bd0e11535513596d0aaafcc
+    password: f9b0a6c2dbd07ab0c207d0189258c1e2aaf765dc
+    is_active: true
+    is_super_admin: false
+    last_login: '2012-09-21 11:56:19'
+    created_at: '2012-09-21 11:56:19'
+    updated_at: '2012-09-21 11:56:19'
+sfGuardUserGroup:
+  sfGuardUserGroup_1_1:
+    User: sfGuardUser_1
+    Group: sfGuardGroup_1
+    created_at: '2012-09-18 11:07:55'
+    updated_at: '2012-09-18 11:07:55'
+sitio:
+  sitio_1:
+    nombre: Iridian
+    categoria: categoria_1
+    latitud: '5.56'
+    longitud: '5.65'
+    direccion: 'Kra 15a  #125a - 26'
+    descripcion: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere, augue ut placerat tincidunt, tortor elit cursus est, ut vestibulum turpis nulla sed ligula. Phasellus et massa massa. Cras scelerisque vehicula metus, ac bibendum erat elementum at. Mauris auctor aliquam tortor ut vehicula. Donec posuere bibendum libero, nec consectetur turpis porta eget. In adipiscing, lorem sit amet luctus tincidunt, nisl leo fringilla justo, et gravida libero purus pellentesque enim. Aliquam erat volutpat. Mauris ultrices, libero et tempor laoreet, nisl lacus sagittis mi, sit amet viverra massa dui hendrerit enim. Donec dui risus, gravida quis lobortis non, eleifend non ante. Mauris arcu lorem, placerat sed faucibus tristique, consequat ut sapien. Aliquam in tincidunt purus. Vivamus justo diam, pretium sit amet vulputate non, semper in massa. Fusce facilisis blandit nisi, id porta urna condimentum eget. Mauris vehicula tincidunt mattis. Quisque at est tincidunt ante vehicula sodales sit amet ultrices lorem.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies dolor non lectus tincidunt sit amet bibendum magna ullamcorper. Duis posuere iaculis nisi, at viverra neque iaculis et. Aenean fermentum elementum nunc vel facilisis. Sed nec velit ac mauris feugiat dapibus. Cras vulputate lorem id quam hendrerit luctus. Integer sed dui id ante egestas bibendum. Nam nisi elit, varius ac vestibulum a, mollis at libero. Sed in justo in sapien ornare mollis sed tempus orci. Curabitur non nisl urna.</p>\r\n<p>Etiam ultrices tellus id arcu blandit egestas. Fusce sed risus in lacus pulvinar viverra eu non arcu. Etiam luctus pulvinar arcu, dignissim pharetra ligula pretium nec. Duis ullamcorper enim dolor. Nam vitae elementum eros. Phasellus pulvinar viverra ligula a pharetra. Ut cursus odio vitae orci cursus fermentum.</p>"
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: 1252_3.jpg
+    thumbnail: 2924_1.jpg
+    calificacion: '0'
+    created_at: '2012-09-21 16:29:00'
+    updated_at: '2012-09-21 16:29:00'
+  sitio_2:
+    nombre: Unicentro
+    categoria: categoria_1
+    latitud: '5.56'
+    longitud: '5.65'
+    direccion: 'Kra 15a  #125a - 26'
+    descripcion: "<p>Pellentesque consectetur sodales suscipit. Quisque dictum aliquet ipsum ut vehicula. Vestibulum ornare mollis consectetur. Donec posuere condimentum mi, sed auctor nulla rutrum a. Fusce vitae quam eget dolor ultricies pulvinar a et libero. Pellentesque interdum tellus in dui molestie luctus. Donec gravida semper purus, sed malesuada mauris mattis eget. Nam eleifend malesuada venenatis.</p>\r\n<p>Suspendisse sagittis odio vitae libero aliquam ullamcorper. Donec molestie facilisis leo, non vestibulum sem mollis a. Phasellus massa nisi, dapibus a pellentesque et, euismod at massa. Curabitur lacus eros, dignissim sit amet fermentum id, mollis in ipsum. Fusce et turpis in arcu tristique blandit. Fusce ultricies orci non elit convallis euismod. Pellentesque at risus massa, in pulvinar diam. Proin posuere, odio vel condimentum vehicula, tellus velit mollis tellus, vel laoreet lorem ipsum ac ipsum. Nunc risus augue, pharetra a mollis at, gravida quis nibh. Duis fringilla viverra tincidunt. Etiam fermentum iaculis felis, eget bibendum tellus condimentum quis. Sed tincidunt fermentum eros, a lacinia sem condimentum id. Pellentesque porta, nisi eget viverra hendrerit, nulla nunc dignissim arcu, id rutrum magna nisl aliquet quam. In scelerisque, massa id interdum pharetra, risus tellus iaculis ligula, sed fringilla urna lectus quis tellus.</p>"
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: 7782_perfil.jpg
+    thumbnail: 3171_perfil.jpg
+    calificacion: '3'
+    created_at: '2009-05-02 02:02:00'
+    updated_at: '2010-03-03 02:02:00'
+  sitio_3:
+    nombre: Sismika
+    categoria: categoria_1
+    latitud: '5.56'
+    longitud: '5.65'
+    direccion: 'Kra 15a  #125a - 26'
+    descripcion: "<p>Pellentesque consectetur sodales suscipit. Quisque dictum aliquet ipsum ut vehicula. Vestibulum ornare mollis consectetur. Donec posuere condimentum mi, sed auctor nulla rutrum a. Fusce vitae quam eget dolor ultricies pulvinar a et libero. Pellentesque interdum tellus in dui molestie luctus. Donec gravida semper purus, sed malesuada mauris mattis eget. Nam eleifend malesuada venenatis.</p>\r\n<p>Suspendisse sagittis odio vitae libero aliquam ullamcorper. Donec molestie facilisis leo, non vestibulum sem mollis a. Phasellus massa nisi, dapibus a pellentesque et, euismod at massa. Curabitur lacus eros, dignissim sit amet fermentum id, mollis in ipsum. Fusce et turpis in arcu tristique blandit. Fusce ultricies orci non elit convallis euismod. Pellentesque at risus massa, in pulvinar diam. Proin posuere, odio vel condimentum vehicula, tellus velit mollis tellus, vel laoreet lorem ipsum ac ipsum. Nunc risus augue, pharetra a mollis at, gravida quis nibh. Duis fringilla viverra tincidunt. Etiam fermentum iaculis felis, eget bibendum tellus condimentum quis. Sed tincidunt fermentum eros, a lacinia sem condimentum id. Pellentesque porta, nisi eget viverra hendrerit, nulla nunc dignissim arcu, id rutrum magna nisl aliquet quam. In scelerisque, massa id interdum pharetra, risus tellus iaculis ligula, sed fringilla urna lectus quis tellus.</p>"
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: 5271_perfil.jpg
+    thumbnail: 1573_perfil.jpg
+    calificacion: '0'
+    created_at: '2009-03-02 02:01:00'
+    updated_at: '2009-03-03 02:03:00'
+usuario:
+  usuario_1:
+    foto: asdf
+    fechanacimiento: '2007-02-03'
+    sexo: M
+    pais: Colombia
+    ciudad: Bogot

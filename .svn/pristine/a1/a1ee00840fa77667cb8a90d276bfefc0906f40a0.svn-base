@@ -1,0 +1,100 @@
+<form id="newsite">
+	<fieldset>
+		<div class="newsite_c1">
+			<label for="sitio">
+				Nombre del Sitio:
+			</label>
+			<input type="text" name="sitio">
+			<label for="url">
+				URL Website:
+			</label>
+			<input type="text" name="url">
+			
+			<label for="categoria">
+				Categoria a la que pertenece:
+			</label>
+			<select>
+				<option>
+					Restaurante
+				</option>
+			</select>
+			
+			<label for="hora">
+				Horario:
+			</label>
+			<input type="text" name="hora">
+			
+			<a class="mashorario" href="">agregar otro horario [+]</a>
+			<?php for ($i = 0; $i < 3; $i++):?>
+				<div class="horario">
+					<a href=""></a>
+					<p>
+						Lunes a miercoles: 12pm - 8pm
+					</p>
+				</div>
+			<?php endfor; ?>
+		</div>
+		<div class="newsite_c2">
+			<label for="dir">
+				Dirección:
+			</label>
+			<input type="text" name="dir">
+			
+			<label for="dir">
+				Ubicación Google Maps:
+			</label>
+			<input type="text" name="dir" onclick="alert('for google maps')">
+		</div>
+		<div class="newsite_c3">
+			<label for="tel">
+				Teléfono(s): 
+			</label>
+			<input type="text" name="tel">
+		</div>
+		<div class="newsite_c4">
+			<label for="desc">
+				Descripción:
+			</label>
+			<textarea>  </textarea>
+			
+			<label for="imagenes">
+				Imagenes:
+			</label>
+			<?php for ($i = 0; $i < 6; $i++):?>
+				<div class="wrap_img">
+					<div class="img">
+						<img src="/images/pruebas/sitio/preview.jpg" alt="imagen sitio btag" />
+					</div>
+					<a href="">Eliminar</a>
+				</div>
+			<?php endfor; ?>
+			<div class="wrap_img">
+				<input type="file" class="file" name="file" value="" />
+			</div>
+		</div>
+		<div class="newsite_c5">
+			<label for="datos">
+				Datos del Sitio:
+			</label>
+			<?php for ($i = 0; $i < 10; $i++):?>
+				<div class="dato_sitio">
+					<label for="tel">
+						Good For Kids 
+					</label>
+					<input type="text" name="tel">
+				</div>
+			<?php endfor; ?>
+		</div>
+		<a href="" class="submit"> Crear </a>
+	</fieldset>
+</form>
+
+
+<link type="text/css" href="/css/jquery.si2.css" rel="stylesheet" media="all" />
+<script type="text/javascript">
+	$(".newsite_c4 .wrap_img:nth-child(7n)").css('margin-right', '0px');
+
+	$(document).ready(function() {
+		$("input.file").si();
+	});
+</script>

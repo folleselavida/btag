@@ -1,0 +1,14 @@
+CREATE TABLE area (id INT AUTO_INCREMENT, top INT NOT NULL, left1 INT NOT NULL, ancho INT NOT NULL, alto INT NOT NULL, imagen VARCHAR(255) NOT NULL, pinteraccion_id INT NOT NULL, vista_id INT NOT NULL, INDEX fk_area_pinteraccion1_idx (pinteraccion_id), INDEX fk_area_vista1_idx (vista_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET latin1 COLLATE latin1_spanish_ci ENGINE = InnoDB;
+CREATE TABLE escenario (id INT AUTO_INCREMENT, nombre VARCHAR(255), linea_id INT NOT NULL, INDEX fk_escenario_linea1_idx (linea_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET latin1 COLLATE latin1_spanish_ci ENGINE = InnoDB;
+CREATE TABLE pinteraccion (id INT AUTO_INCREMENT, producto_id INT NOT NULL, INDEX fk_pinteraccion_producto1_idx (producto_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET latin1 COLLATE latin1_spanish_ci ENGINE = InnoDB;
+CREATE TABLE pinteraccion_tinteraccion (pinteraccion_id INT, tinteraccion_id INT, INDEX fk_pinteraccion_tinteraccion_tinteraccion1_idx (tinteraccion_id), INDEX fk_pinteraccion_tinteraccion_pinteraccion1_idx (pinteraccion_id), PRIMARY KEY(pinteraccion_id, tinteraccion_id)) DEFAULT CHARACTER SET latin1 COLLATE latin1_spanish_ci ENGINE = InnoDB;
+CREATE TABLE tinteraccion (id INT AUTO_INCREMENT, nombre VARCHAR(255) NOT NULL, imagen VARCHAR(255) NOT NULL, orden INT DEFAULT 1, escenario_id INT NOT NULL, INDEX fk_tinteraccion_escenario1_idx (escenario_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET latin1 COLLATE latin1_spanish_ci ENGINE = InnoDB;
+CREATE TABLE vista (id INT AUTO_INCREMENT, nombre VARCHAR(255) NOT NULL, fondo VARCHAR(255) NOT NULL, escenario_id INT NOT NULL, INDEX fk_vista_escenario1_idx (escenario_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET latin1 COLLATE latin1_spanish_ci ENGINE = InnoDB;
+ALTER TABLE area ADD CONSTRAINT area_vista_id_vista_id FOREIGN KEY (vista_id) REFERENCES vista(id);
+ALTER TABLE area ADD CONSTRAINT area_pinteraccion_id_pinteraccion_id FOREIGN KEY (pinteraccion_id) REFERENCES pinteraccion(id);
+ALTER TABLE escenario ADD CONSTRAINT escenario_linea_id_linea_id FOREIGN KEY (linea_id) REFERENCES linea(id);
+ALTER TABLE pinteraccion ADD CONSTRAINT pinteraccion_producto_id_producto_id FOREIGN KEY (producto_id) REFERENCES producto(id);
+ALTER TABLE pinteraccion_tinteraccion ADD CONSTRAINT pinteraccion_tinteraccion_tinteraccion_id_tinteraccion_id FOREIGN KEY (tinteraccion_id) REFERENCES tinteraccion(id);
+ALTER TABLE pinteraccion_tinteraccion ADD CONSTRAINT pinteraccion_tinteraccion_pinteraccion_id_pinteraccion_id FOREIGN KEY (pinteraccion_id) REFERENCES pinteraccion(id);
+ALTER TABLE tinteraccion ADD CONSTRAINT tinteraccion_escenario_id_escenario_id FOREIGN KEY (escenario_id) REFERENCES escenario(id);
+ALTER TABLE vista ADD CONSTRAINT vista_escenario_id_escenario_id FOREIGN KEY (escenario_id) REFERENCES escenario(id);

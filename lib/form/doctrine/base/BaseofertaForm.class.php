@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * oferta form base class.
+ *
+ * @method oferta getObject() Returns the current form's model object
+ *
+ * @package    AUV
+ * @subpackage form
+ * @author     
+ * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
+ */
+abstract class BaseofertaForm extends BaseFormDoctrine
+{
+  public function setup()
+  {
+    $this->setWidgets(array(
+      'id'           => new sfWidgetFormInputHidden(),
+      'nombre'       => new sfWidgetFormInputText(),
+      'imagen'       => new sfWidgetFormInputText(),
+      'cantidad'     => new sfWidgetFormInputText(),
+      'fechainicio'  => new sfWidgetFormDateTime(),
+      'fechatermino' => new sfWidgetFormDateTime(),
+      'descripcion'  => new sfWidgetFormTextarea(),
+      'tipo'         => new sfWidgetFormChoice(array('choices' => array('Oferta' => 'Oferta', 'Oferta CI' => 'Oferta CI', 'Evento' => 'Evento'))),
+      'sitio_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sitio'), 'add_empty' => false)),
+      'destacada'    => new sfWidgetFormInputCheckbox(),
+      'created_at'   => new sfWidgetFormDateTime(),
+      'updated_at'   => new sfWidgetFormDateTime(),
+    ));
+
+    $this->setValidators(array(
+      'id'           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'nombre'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'imagen'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'cantidad'     => new sfValidatorInteger(array('required' => false)),
+      'fechainicio'  => new sfValidatorDateTime(),
+      'fechatermino' => new sfValidatorDateTime(array('required' => false)),
+      'descripcion'  => new sfValidatorString(array('max_length' => 10000)),
+      'tipo'         => new sfValidatorChoice(array('choices' => array(0 => 'Oferta', 1 => 'Oferta CI', 2 => 'Evento'))),
+      'sitio_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sitio'))),
+      'destacada'    => new sfValidatorBoolean(array('required' => false)),
+      'created_at'   => new sfValidatorDateTime(),
+      'updated_at'   => new sfValidatorDateTime(),
+    ));
+
+    $this->widgetSchema->setNameFormat('oferta[%s]');
+
+    $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
+
+    $this->setupInheritance();
+
+    parent::setup();
+  }
+
+  public function getModelName()
+  {
+    return 'oferta';
+  }
+
+}

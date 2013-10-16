@@ -1,0 +1,29 @@
+<div class="wrap_menu">
+	<ul id="menu" >
+		<li>
+			<a href="<?php echo url_for('crear_perfil') ?>">
+				Perfil
+			</a>
+		</li>
+		<li>
+			<a href="<?php echo url_for('registro') ?>">
+				Registrarse
+			</a>
+		</li>
+		<li>
+			<a href="<?php echo url_for('categoria') ?>">
+				Sitios
+			</a>
+		</li>
+		<li>
+			<a href="">
+				Usuarios de sitios
+			</a>
+		</li>
+		<li>
+			<a href="<?php echo url_for('contacto') ?>">
+				Contáctenos
+			</a>
+		</li>
+	</ul>
+</div>

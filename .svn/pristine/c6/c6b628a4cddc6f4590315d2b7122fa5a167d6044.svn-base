@@ -1,0 +1,23 @@
+a, img {
+	border: none
+}
+
+#mejor_cat_child div ol {
+	padding: 0 0 0 25px;
+}
+
+#categorias {
+	margin: 0px 0px 0px 3px;
+}
+
+#buscador input[type="text"] {
+	margin-left: -30px;
+}
+
+.crear_perfil  input[type="text"], .crear_perfil  input[type="password"] {
+	margin:5px 0px 15px -30px;
+}
+
+.crear_perfil textarea {
+	margin-left: -30px;
+}

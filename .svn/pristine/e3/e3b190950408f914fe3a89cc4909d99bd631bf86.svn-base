@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <?php include_http_metas() ?>
+    <?php include_metas() ?>
+    <?php include_title() ?>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <?php include_stylesheets() ?>
+    <?php include_javascripts() ?>
+    
+  </head>
+  <body>
+  <img id="delantal" src="/images/fondo/delantal.jpg"/>
+  	<?php if( $sf_user->hasCredential('admin') ){?>
+  	<div class="fl nav">
+	  	<div class="menu_be">
+	  		<ul>
+	  			<li><a href="/manual.pdf" target="_blank">Manual Administrador</a></li>
+	  			<li><a href="<?php echo url_for("home")?>">Seccion Home </a>
+	  			<ul class="sal">
+	  			<li><a href="<?php echo url_for("imagen")?>">Imagenes</a></li>
+	  			<li><a href="<?php echo url_for("frasegaviero")?>">Frases Gaviero</a></li>
+	  			</ul>
+	  			</li>
+	  			<li><a href="">Seccion Eventos</a>
+	  			<ul class="sal">
+	  			<li><a href="<?php echo url_for("tipoevento")?>">Eventos</a></li>
+	  			</ul>
+	  			</li>
+	  			<li><a href="<?php echo url_for("bannerlateral")?>">Banner lateral</a></li>
+	  			<li><a href="<?php echo url_for("nuestraempresa")?>">Seccion Empresa</a>
+	  			<ul class="sal">
+	  			<li><a href="<?php echo url_for("galeriaempresa")?>">Galeria </a></li>
+	  			</ul>
+	  			</li>
+	  			<li><a href="<?php echo url_for("menu")?>">Imagen Menu</a>
+	  			<ul class="sal">
+	  			<li><a href="<?php echo url_for("indice")?>">Categorias Indice</a></li>
+	  			<li><a href="<?php echo url_for("imagenesmenu")?>">Menu</a></li>
+	  			</ul>
+	  			</li>
+	  			<li><a href="<?php echo url_for("fotoarte")?>">Foto Arte</a>
+	  			<ul class="sal">	  
+	  			<li><a href="<?php echo url_for("ano")?>">Ano</a>
+	  			</li>
+	  			<li><a href="<?php echo url_for("carpeta")?>">Carpetas</a></li>
+	  			</ul>
+	  			</li>
+	  			<li><a href="<?php echo url_for("almacen")?>">Almacen</a>
+	  			<ul class="sal">	  
+	  			<li><a href="<?php echo url_for("categoriaproducto")?>">Categorias</a></li>
+	  			<li><a href="<?php echo url_for("imagenesproducto")?>">Productos</a>
+	  			</li>
+	  			</ul>
+	  			</li>
+	  			<li><a href="">Items Desplegables</a>
+	  			<ul class="sal">	  
+	  			<li><a href="<?php echo url_for("itemsnumerado")?>">Items Numerados</a></li>
+	  			<li><a href="<?php echo url_for("itemsnonumerado")?>">Items No Numerados</a></li>
+	  			</ul>
+	  			</li>
+	  			<li><a href="<?php echo url_for("corazon")?>">Corazon Comensales</a></li>
+	  			<li><a href="<?php echo url_for("minisitio")?>">Mini Sitios</a>
+	  			<ul class="sal">
+	  			<li><a href="<?php echo url_for("galeriaempresa")?>">Galeria </a></li>
+	  			</ul>
+	  			</li> 
+	  			
+	  			<li><a href="">Footer </a>
+		  			<ul class="sal">
+						<li><a href="<?php echo url_for("patrocinador")?>">Patrocinadores</a></li>  
+						<li><a href="<?php echo url_for("sitio")?>">Nuestros Sitios</a></li>
+						<li><a href="<?php echo url_for("salaprensa")?>">Sala de Prensa</a></li>
+						<li><a href="<?php echo url_for("megafono")?>">El Megafono</a></li>
+						<li><a href="<?php echo url_for("ayuda")?>">FAQS</a></li>  
+						<li><a href="<?php echo url_for("misivavirtual")?>">Texto Misiva</a></li>   
+						<li><a href="<?php echo url_for("misiva")?>">Ver Misivas</a></li>
+						
+						   
+						
+		  			</ul>
+	  			</li>
+	  			
+	  			<li><a href="<?php echo url_for("comentario")?>">Comentarios</a></li> 
+	  			<li><a href="<?php echo url_for("video")?>">Videos</a></li> 
+	  			<li><a href="<?php echo url_for("calendario")?>">Calendario</a></li> 
+	  			<li><a href="<?php echo url_for("descarga")?>">Descargas</a></li> 	
+	  			<li><a href="<?php echo url_for("reservafoto")?>">Foto Reserva</a></li> 	
+	  			<li><a href="<?php echo url_for("reserva")?>">Reservas</a></li>
+	  			<li><a href="<?php echo url_for("imagenme")?>">Imagenes Mes</a></li>  		
+	  			
+	  		</ul>
+	  	</div>
+	  	
+		<div class="menu_be menu_dos">
+			<ul>
+			<?php if ( Iridian::getUser()->isSuperAdmin()){?>
+				<li><a href="">Admin. Usuarios</a>
+			  		<ul class="sal">
+				  		<li><a href="<?php echo url_for('sf_guard_user')?>">Usuarios</a></li>
+				  	</ul>
+			  	</li>
+			  <?php }?>
+		  		<li>
+		  			<a href="<?php echo url_for('sf_guard_signout')?>" >Salir</a>
+		  		</li>
+			</ul>
+		</div>
+		
+	</div>
+  	<?php }else $sf_user->signOut(); ?>
+  	<div class="fl content_iridian">
+    <?php echo $sf_content ?>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+<div id="promo">
+	<?php foreach($promo as $i => $prom): ?>
+		<a href="<?php echo $prom[1]?>" target="_blank">
+			<img src="/images/pruebas/sitio/<?php echo $prom[0]?>.jpg" alt="promocion <?php echo $i ?> business tag" />
+		</a>	
+	<?php endforeach; ?>
+</div>

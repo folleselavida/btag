@@ -1,0 +1,86 @@
+catgenerica:
+  catgenerica_1:
+    nombre: 'Sobre BTag'
+  catgenerica_2:
+    nombre: 'Para usuarios'
+  catgenerica_3:
+    nombre: 'Para empresas'
+  catgenerica_4:
+    nombre: Servicios
+  catgenerica_5:
+    nombre: Nosotros
+  catgenerica_6:
+    nombre: Normatividad
+  catgenerica_7:
+    nombre: FAQ
+generica:
+  generica_1:
+    titulo: 'SubCat 1'
+    contenido: '<p>as dasd fasd fasd f</p>'
+    catgenerica: catgenerica_1
+  generica_2:
+    titulo: 'SubCat 2'
+    contenido: '<p>ads fasd fasd f</p>'
+    catgenerica: catgenerica_1
+  generica_3:
+    titulo: 'SubCat 1'
+    contenido: '<p>a sdfasd asd fasd f</p>'
+    catgenerica: catgenerica_2
+  generica_4:
+    titulo: 'SubCat 2'
+    contenido: '<p>asd fasd fasdf</p>'
+    catgenerica: catgenerica_2
+  generica_5:
+    titulo: 'SubCat 1'
+    contenido: '<p>asdf asdf asd f</p>'
+    catgenerica: catgenerica_3
+  generica_6:
+    titulo: 'SubCat 2'
+    contenido: '<p>asdfasd f</p>'
+    catgenerica: catgenerica_4
+  generica_7:
+    titulo: 'SubCat 2'
+    contenido: '<p>asd fasd f</p>'
+    catgenerica: catgenerica_6
+  generica_8:
+    titulo: 'SubCat 2'
+    contenido: '<p>afsd fasd</p>'
+    catgenerica: catgenerica_7
+sfGuardGroup:
+  sfGuardGroup_1:
+    name: admin
+    description: 'Administrator group'
+    created_at: '2012-09-18 11:07:55'
+    updated_at: '2012-09-18 11:07:55'
+sfGuardGroupPermission:
+  sfGuardGroupPermission_1_1:
+    Group: sfGuardGroup_1
+    Permission: sfGuardPermission_1
+    created_at: '2012-09-18 11:07:55'
+    updated_at: '2012-09-18 11:07:55'
+sfGuardPermission:
+  sfGuardPermission_1:
+    name: admin
+    description: 'Administrator permission'
+    created_at: '2012-09-18 11:07:55'
+    updated_at: '2012-09-18 11:07:55'
+sfGuardUser:
+  sfGuardUser_1:
+    first_name: John
+    last_name: Doe
+    email_address: john.doe@gmail.com
+    username: admin
+    algorithm: sha1
+    salt: dffb286e83ae9a49047fc991dc4dbeb3
+    password: f0c291a3edfe6f837c9e66f40f6f9760ec0c2a55
+    is_active: true
+    is_super_admin: true
+    last_login: null
+    created_at: '2012-09-18 11:07:55'
+    updated_at: '2012-09-18 11:07:55'
+sfGuardUserGroup:
+  sfGuardUserGroup_1_1:
+    User: sfGuardUser_1
+    Group: sfGuardGroup_1
+    created_at: '2012-09-18 11:07:55'
+    updated_at: '2012-09-18 11:07:55'

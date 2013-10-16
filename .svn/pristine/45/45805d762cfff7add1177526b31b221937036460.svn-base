@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * usuario form base class.
+ *
+ * @method usuario getObject() Returns the current form's model object
+ *
+ * @package    AUV
+ * @subpackage form
+ * @author     
+ * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
+ */
+abstract class BaseusuarioForm extends BaseFormDoctrine
+{
+  public function setup()
+  {
+    $this->setWidgets(array(
+      'id'              => new sfWidgetFormInputHidden(),
+      'foto'            => new sfWidgetFormInputText(),
+      'fechanacimiento' => new sfWidgetFormDate(),
+      'sexo'            => new sfWidgetFormChoice(array('choices' => array('M' => 'M', 'F' => 'F'))),
+      'pais'            => new sfWidgetFormInputText(),
+      'ciudad'          => new sfWidgetFormInputText(),
+    ));
+
+    $this->setValidators(array(
+      'id'              => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'foto'            => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'fechanacimiento' => new sfValidatorDate(),
+      'sexo'            => new sfValidatorChoice(array('choices' => array(0 => 'M', 1 => 'F'), 'required' => false)),
+      'pais'            => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'ciudad'          => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+    ));
+
+    $this->widgetSchema->setNameFormat('usuario[%s]');
+
+    $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
+
+    $this->setupInheritance();
+
+    parent::setup();
+  }
+
+  public function getModelName()
+  {
+    return 'usuario';
+  }
+
+}

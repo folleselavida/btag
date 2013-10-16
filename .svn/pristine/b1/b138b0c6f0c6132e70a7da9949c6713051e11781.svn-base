@@ -1,0 +1,236 @@
+<?php
+
+/**
+ * banner actions.
+ *
+ * @package    aa
+ * @subpackage banner
+ * @author     Your name here
+ * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ */
+class bannerActions extends sfActions
+{
+	public function executeIndex(sfWebRequest $request)
+	{
+		$this->li_cate = $this-> li_cate();
+		$this->cate = $this-> cate();
+		$this->sitios = $this-> sitios();
+		$this->colIzq = 'visible';
+		$this->colDer = 'visible';
+		$this->ofertas = $this -> ofertas_dest();
+		$this->eventos = $this -> eventos_dest();
+	}
+
+	public function executeSitio(sfWebRequest $request)
+	{
+		$this->colIzq = 'visible';
+		$this->colDer = 'hidden';
+		$this->tags = '10';
+		$this->categoria = 'Restaurante & Bar';
+		$this->cateImg = 'rest';
+		$this-> info = '<h2> Horarios: </h2> <p> 	Lunes a Viernes: 12 am - 8 pm </p> <p> 	Sabados: 10 am - 12 pm </p> <p> 	Domingos: 10 am - 3 pm </p> <p> </p> <h2> 	Dirección: </h2> <p> 	Cra 4A No. 27 - 27 </p> <h2> 	Teléfono: </h2> <p> 	281 12 86 - 284 88 86 </p> <p> 	314 382 2453 </p> <a href="" target="_blank"> 	www.lahamburgueseria.com </a>';
+		$this->carac = $this-> carac();
+		$this->descripcion = '<p>Fusce scelerisque, dui sed dignissim egestas, velit ante suscipit nulla, hendrerit egestas tellus ipsum et tellus. Phasellus sodales vestibulum cursus. Ut in leo eget turpis auctor consequat et feugiat leo. Aliquam eget lacus non eros ornare feugiat. In hac habitasse platea dictumst. In pharetra risus at lorem dignissim eget condimentum odio vulputate. Nullam mollis enim nec diam pulvinar eu dapibus ligula cursus. In hac habitasse platea dictumst. Cras consequat metus vitae sem feugiat nec placerat quam luctus. Suspendisse iaculis pharetra dolor ut iaculis. Quisque auctor faucibus turpis a convallis. Nullam eget interdum enim. Donec pharetra velit non velit pharetra in dignissim elit dignissim.</p>';
+		$this->coments = $this->coments();
+		$this->promo = $this-> promo();
+	}
+	
+	public function executePerfil(sfWebRequest $request)
+	{
+		$this->colIzq = 'visible';
+		$this->colDer = 'hidden';
+		$this->review = $this->review();
+	}
+	
+	public function executeCategoria(sfWebRequest $request)
+	{
+		$this->colIzq = 'visible';
+		$this->colDer = 'hidden';
+		$this->li_cate = $this-> li_cate();
+		$this->resultados = $this->resultados();
+	}
+	
+	public function executeCrearPerfil(sfWebRequest $request)
+	{
+		$this->colIzq = 'visible';
+		$this->colDer = 'hidden';
+	}
+	
+	public function executeRegistro(sfWebRequest $request)
+	{
+		$this->colIzq = 'visible';
+		$this->colDer = 'hidden';
+	}
+	
+	public function executeContacto(sfWebRequest $request)
+	{
+		$this->colIzq = 'hidden';
+		$this->colDer = 'hidden';
+		
+	}
+		
+	
+	public function executeSendMail(sfWebRequest $request){
+		
+		$nombre = $request->getParameter("nombre");
+		$email = $request->getParameter("email");
+		$tema = $request->getParameter("tema");
+		$ciudad = $request->getParameter("ciudad");
+		$mensaje = $request->getParameter("mensaje");
+		
+		//Revision de los datos
+		if ($this->isValidEmail($email) && $this->isNotEmpty($nombre) && $this->isNotEmpty($mensaje)) {
+			//Se envia el correo
+			
+			//Obtener el to de la DB
+			$to = "william@iridian.co";
+			$subject = 'Contacto desde pagina web - Btag';
+			$random_hash = md5(date('r', time()));
+			$headers = "From: 'Business Tag' <william@iridian.co>\r\nReply-To: william@iridian.co";
+			$headers .= "\r\nBcc: ".$to;
+			$headers .= "\r\nContent-Type: text/html; charset='iso-8859-1'\r\n";
+			$m = $this->getPartial("banner/mail", array("nombre"=>$nombre, "email"=>$email, "tema"=>$tema,"ciudad"=>$ciudad, "mensaje"=>$mensaje));
+			try {
+				$mail_sent = @mail( '', $subject, $m, $headers);
+				$this->msj = "Mensaje enviado correctamente, pronto estaremos en contacto";
+			} catch (Exception $e) {
+				$this->msj = "Ha ocurrido un error";
+			}
+			}
+	}
+	
+	function isValidEmail($email){
+		return preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/", $email);
+	}
+	
+	function isNotEmpty($data){
+		if(strlen($data)>0){
+			return true;
+		}
+		return false;
+	}
+	
+	public function cate(){
+		$cate[] = array('Tiendas', 1, $this->cate_li_1());
+		$cate[] = array('Tiendas', 1, $this->cate_li_1());
+		$cate[] = array('Tiendas', 1, $this->cate_li_1());
+		$cate[] = array('Tiendas', 1, $this->cate_li_1());
+		$cate[] = array('Tiendas', 1, $this->cate_li_1());
+		$cate[] = array('Tiendas', 1, $this->cate_li_1());
+		$cate[] = array('Tiendas', 1, $this->cate_li_1());
+		$cate[] = array('Tiendas', 1, $this->cate_li_1());
+		
+		return $cate;
+	}
+	
+	public function sitios(){
+		$sit[] = array(3, 'hamburgueseria', 1, 'La Hamburgueseria', 'Sed faucibus suscipit est.');
+		$sit[] = array(3, 'hamburgueseria', 1, 'La Hamburgueseria', 'Sed faucibus suscipit est.');
+		$sit[] = array(3, 'hamburgueseria', 1, 'La Hamburgueseria', 'Sed faucibus suscipit est.');
+		
+		return $sit;
+	}
+	
+	public function li_cate(){
+		$li[] = array('rest', 'Restaurantes');
+		$li[] = array('hot', 'Hoteles');
+		$li[] = array('bar', 'Bares');
+		$li[] = array('ti', 'Tiendas');
+		$li[] = array('spa', 'Spa');
+		$li[] = array('spa', 'Centros Deportivos');
+		$li[] = array('club', 'Club Social');
+		$li[] = array('uni', 'Universidades');
+		$li[] = array('cole', 'Colegios');
+	
+		return $li;
+	}
+	
+	public function cate_li_1(){
+		$li[] = array('Bershka');
+		$li[] = array('Cursus');
+		$li[] = array('Lorem Ipsum');
+		$li[] = array('Dolor Sit Amet');
+		$li[] = array('Praesent Omare liberare Ipsum');
+		
+		
+		return $li;
+	}
+	
+	public function carac(){
+		$car[] = array('Waiter Service');
+		$car[] = array('Good for Groups:');
+		$car[] = array('Hours: 5 -10');
+		$car[] = array('Noise level');
+		$car[] = array('Outdoor Seating');
+		$car[] = array('Price Range: 20,000 - 100,000');
+		$car[] = array('Good for kids: Yes');
+		$car[] = array('Ambience: loud');
+		$car[] = array('Wi-fi: Yes');
+		$car[] = array('Takes Reservations');
+		$car[] = array('Accepts credit cards');
+		$car[] = array('Has TV: Yes');
+		$car[] = array('Good for: adults');
+		$car[] = array('Delivery');
+		$car[] = array('Parking');
+		$car[] = array('Caters');
+		$car[] = array('Alcohol: Yes');
+		$car[] = array('Take-out: Yes');
+		$car[] = array('Parking: yes');
+		$car[] = array('Weelchair Access');
+		$car[] = array('Dogs Allowed: No');
+		return $car;
+	}
+	
+	public function coments(){
+		$com[] = array(5, 'fernando_caviedes', 'perfil', 'Fernando Caviedes', '20', 'Restaurante', '<p>Praesent ornare libero et diam sagittis a scelerisque neque hendrerit. Donec id quam a nisl lobortis convallis. Vivamus eget velit at nisl laoreet faucibus. Sed faucibus suscipit est. Nunc vitae enim libero. Fusce non tellus nisi, ac accumsan erat. Suspendisse ac sapien erat, quis cursus ipsum</p>');
+		$com[] = array(5, 'fernando_caviedes', 'perfil', 'Fernando Caviedes', '20', 'Restaurante', '<p>Praesent ornare libero et diam sagittis a scelerisque neque hendrerit. Donec id quam a nisl lobortis convallis. Vivamus eget velit at nisl laoreet faucibus. Sed faucibus suscipit est. Nunc vitae enim libero. Fusce non tellus nisi, ac accumsan erat. Suspendisse ac sapien erat, quis cursus ipsum</p>');
+		$com[] = array(5, 'fernando_caviedes', 'perfil', 'Fernando Caviedes', '20', 'Restaurante', '<p>Praesent ornare libero et diam sagittis a scelerisque neque hendrerit. Donec id quam a nisl lobortis convallis. Vivamus eget velit at nisl laoreet faucibus. Sed faucibus suscipit est. Nunc vitae enim libero. Fusce non tellus nisi, ac accumsan erat. Suspendisse ac sapien erat, quis cursus ipsum</p>');
+		$com[] = array(5, 'fernando_caviedes', 'perfil', 'Fernando Caviedes', '20', 'Restaurante', '<p>Praesent ornare libero et diam sagittis a scelerisque neque hendrerit. Donec id quam a nisl lobortis convallis. Vivamus eget velit at nisl laoreet faucibus. Sed faucibus suscipit est. Nunc vitae enim libero. Fusce non tellus nisi, ac accumsan erat. Suspendisse ac sapien erat, quis cursus ipsum</p>');
+		
+		return $com;
+	}
+	
+	public function promo(){
+		$prom[] = array('prom1', 'http://google.com');
+		$prom[] = array('prom2', 'http://google.com');
+		$prom[] = array('prom3', 'http://google.com');
+		$prom[] = array('prom1', 'http://google.com');
+		
+		return $prom;
+	}
+	
+	public function review(){
+		$rev[] = array(5, 'La Hamburguesería', 'Restaurantes, Lorem, Ipsum', '31/07/2012', 'Cra 50a # 118-79', '(091) 620 59 17', '<p>Praesent ornare libero et diam sagittis a scelerisque neque hendrerit. Donec id quam a nisl lobortis convallis. Vivamus eget velit at nisl laoreet faucibus. Sed faucibus suscipit est. Nunc vitae enim libero. Fusce non tellus nisi, ac accumsan erat. Suspendisse ac sapien erat, quis cursus ipsum. </p>', 'hamburgueseria');
+		$rev[] = array(5, 'La Hamburguesería', 'Restaurantes, Lorem, Ipsum', '31/07/2012', 'Cra 50a # 118-79', '(091) 620 59 17', '<p> Praesent ornare libero et diam sagittis a scelerisque neque hendrerit. Donec id quam a nisl lobortis convallis. Vivamus eget velit at nisl laoreet faucibus. Sed faucibus suscipit est. Nunc vitae enim libero. Fusce non tellus nisi, ac accumsan erat. Suspendisse ac sapien erat, quis cursus ipsum. </p>', 'hamburgueseria');
+		$rev[] = array(5, 'La Hamburguesería', 'Restaurantes, Lorem, Ipsum', '31/07/2012', 'Cra 50a # 118-79', '(091) 620 59 17', '<p> Praesent ornare libero et diam sagittis a scelerisque neque hendrerit. Donec id quam a nisl lobortis convallis. Vivamus eget velit at nisl laoreet faucibus. Sed faucibus suscipit est. Nunc vitae enim libero. Fusce non tellus nisi, ac accumsan erat. Suspendisse ac sapien erat, quis cursus ipsum. </p>', 'hamburgueseria');
+		
+		return $rev;
+	}
+	
+	public function resultados(){
+		$com[] = array(5, 'hamburgueseria', '1', 'La Hamburgueseria', '20', 'Restaurante', '<p>Praesent ornare libero et diam sagittis a scelerisque neque hendrerit. Donec id quam a nisl lobortis convallis. Vivamus eget velit at nisl laoreet faucibus. Sed faucibus suscipit est. Nunc vitae enim libero. Fusce non tellus nisi, ac accumsan erat. Suspendisse ac sapien erat, quis cursus ipsum</p>');
+		$com[] = array(5, 'hamburgueseria', '1', 'La Hamburgueseria', '20', 'Restaurante', '<p>Praesent ornare libero et diam sagittis a scelerisque neque hendrerit. Donec id quam a nisl lobortis convallis. Vivamus eget velit at nisl laoreet faucibus. Sed faucibus suscipit est. Nunc vitae enim libero. Fusce non tellus nisi, ac accumsan erat. Suspendisse ac sapien erat, quis cursus ipsum</p>');
+		$com[] = array(5, 'hamburgueseria', '1', 'La Hamburgueseria', '20', 'Restaurante', '<p>Praesent ornare libero et diam sagittis a scelerisque neque hendrerit. Donec id quam a nisl lobortis convallis. Vivamus eget velit at nisl laoreet faucibus. Sed faucibus suscipit est. Nunc vitae enim libero. Fusce non tellus nisi, ac accumsan erat. Suspendisse ac sapien erat, quis cursus ipsum</p>');
+		
+		return $com;
+	}
+	
+	public function ofertas_dest(){
+		$ofer[] = array('prom1.jpg', '50% de descuento en hamburguesas al carbon más 2 adiciones', '2 dias' , '1.jpg', 'La Hamburguesería', 'Restaurante', 'Cra 4A No. 27 - 27 ' );
+		$ofer[] = array('prom1.jpg', '50% de descuento en hamburguesas al carbon más 2 adiciones', '2 dias' , '1.jpg', 'La Hamburguesería', 'Restaurante', 'Cra 4A No. 27 - 27 ' );
+		$ofer[] = array('prom1.jpg', '50% de descuento en hamburguesas al carbon más 2 adiciones', '2 dias' , '1.jpg', 'La Hamburguesería', 'Restaurante', 'Cra 4A No. 27 - 27 ' );
+		$ofer[] = array('prom1.jpg', '50% de descuento en hamburguesas al carbon más 2 adiciones', '2 dias' , '1.jpg', 'La Hamburguesería', 'Restaurante', 'Cra 4A No. 27 - 27 ' );
+		
+		return $ofer;
+	}
+	
+	public function eventos_dest(){
+		$ofer[] = array('prom1.jpg', '50% de descuento en hamburguesas al carbon más 2 adiciones', '23/09/212' , '1.jpg', 'La Hamburguesería', 'Restaurante', 'Cra 4A No. 27 - 27 ' );
+		$ofer[] = array('prom1.jpg', '50% de descuento en hamburguesas al carbon más 2 adiciones', '23/09/212' , '1.jpg', 'La Hamburguesería', 'Restaurante', 'Cra 4A No. 27 - 27 ' );
+		$ofer[] = array('prom1.jpg', '50% de descuento en hamburguesas al carbon más 2 adiciones', '23/09/212' , '1.jpg', 'La Hamburguesería', 'Restaurante', 'Cra 4A No. 27 - 27 ' );
+		$ofer[] = array('prom1.jpg', '50% de descuento en hamburguesas al carbon más 2 adiciones', '23/09/212' , '1.jpg', 'La Hamburguesería', 'Restaurante', 'Cra 4A No. 27 - 27 ' );
+		
+		return $ofer;
+	}
+	
+}

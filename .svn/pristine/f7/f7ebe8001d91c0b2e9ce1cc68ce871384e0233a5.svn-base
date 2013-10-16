@@ -1,0 +1,35 @@
+<div class="wrap_menu">
+	<ul id="menu" >
+		<li>
+			<a href="<?php echo url_for('crear_perfil') ?>">
+				Perfil
+			</a>
+		</li>
+		<li>
+			<a href="<?php echo url_for('registro') ?>">
+				Registro Empresarial
+			</a>
+		</li>
+		<li>
+			<a href="<?php echo url_for('categoria') ?>">
+				Sitios
+			</a>
+		</li>
+		<li>
+			<a href="<?php echo url_for('contacto') ?>">
+				Contáctenos
+			</a>
+		</li>
+	</ul>
+	
+	<form id="searchbar">
+		<fieldset>
+			<input type="text" onblur="fillCampo(this,'Ingresa tu busqueda')" onfocus="cleanCampo(this,'Ingresa tu busqueda')" onclick="cleanCampo(this,'Ingresa tu busqueda')" value="Ingresa tu busqueda" />
+			<input type="submit" value=""/>
+		</fieldset>
+	</form>
+	<a id="fbconnect"></a>
+	<a class="social" id="fb"></a>
+	<a class="social" id="plus"></a>
+	<a class="social" id="tw"></a>
+</div>

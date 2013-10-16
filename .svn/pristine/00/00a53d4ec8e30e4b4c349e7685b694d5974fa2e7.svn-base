@@ -1,0 +1,41 @@
+<?php 
+if(count($reviews)<1){
+	?>
+	Aún no se han realizado reviews
+	<?php 
+	
+}
+else{
+?>
+
+<?php foreach($reviews[0]["reviews"] as $rev):?>
+	<div class="reviews">
+		<img class="tag2" alt="tag business tag" src="/images/tags/<?php echo $rev["calificacion"]."s.png"?>">
+		<h1>
+			<?php echo $rev["created_at"] ?>
+		</h1>
+		<p class="tit">
+			<a href="<?php echo url_for2('perfil', array('id' => "1" ) ) ?>">
+				<?php echo $nombre?> 
+			</a>
+			comento en:
+			<a href="<?php echo url_for2('sitio', array('id' => $rev["sitio"]["id"] ) ) ?>" >
+				<?php echo $rev["sitio"]["nombre"]?>
+			</a>
+		</p>
+		<?php echo html_entity_decode($rev["texto"]) ?>
+		<div class="adds">
+			<div>
+				2 check-ins aquí
+			</div>
+			<a href=""> editar comentario </a>
+		</div>
+	</div>
+<?php endforeach;
+?>
+<a id="ver_rev" class="ver_mas" href="">ver mas</a>
+<?php  
+}?>
+
+
+

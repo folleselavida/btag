@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+
+
+/*Body*/
+
+body {
+	margin:0px;
+	border:none;
+	font-family: Arial, helvetica;
+}
+img, div {
+	border: none;
+}
+
+a, p {
+	text-decoration:none;
+	font-family: Arial, helvetica;
+	color: #FFFF0B;
+}
+input {
+	border:none;
+}

@@ -1,0 +1,107 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+
+homepage:
+  url:   /
+  param: { module: banner, action: index } 
+
+categoria:
+  url:   /categoria
+  param: { module: empresarial, action: categoria } 
+  
+createreview:
+  url: /empresarial/createReview
+  param: { module: empresarial, action: createReview }
+  
+createimage:
+  url: /empresarial/submitImage
+  param: { module: empresarial, action: submitImage }
+    
+busquedasitio:
+  url: /empresarial/busquedaSitio
+  param: { module: empresarial, action: busquedaSitio }
+
+busquedacat:
+  url: /empresarial/busquedaCat
+  param: { module: empresarial, action: busquedaCat }
+
+busqueda:
+  url: /empresarial/busqueda
+  param: { module: empresarial, action: busqueda }
+  
+createsitio:
+  url: /empresarial/createsitio
+  param: { module: empresarial, action: createSitio }  
+    
+registro:
+  url:   /registro
+  param: { module: empresarial, action: registro }
+  
+  
+finalizar:
+  url:   /finalizar
+  param: { module: empresarial, action: finalizar }
+  
+contacto:
+  url:   /contacto
+  param: { module: banner, action: contacto }
+
+
+sitio:
+  url:     /sitio/:nombre/:id
+  class:   sfDoctrineRoute
+  options: { model: sitio, type: list }
+  param:   { module: empresarial, action: index }
+  requirements: 
+    sf_method: [get]
+    
+      
+perfil:
+  url:     /perfil/:nombre/:id
+  class:   sfDoctrineRoute
+  options: { model: usuario, type: list }
+  param:   { module: perfil, action: index }
+  requirements: 
+    sf_method: [get]
+
+  
+crear_perfil:
+  url:   /crear_perfil
+  param: { module: perfil, action: crearPerfil }
+  
+generica:
+  url:     /:nombre_slug/:id
+  class:   sfDoctrineRoute
+  options: { model: generica, type: list }
+  param:   { module: banner, action: generica }
+  requirements: 
+    sf_method: [get]
+  
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+sf_guard_password:
+  url:   /request_password
+  param: { module: sfGuardAuth, action: password }
+sf_guard_register:
+  url:   /register
+  param: { module: sfGuardRegister, action: index }   
+
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+ 
+default:
+  url:   /:module/:action/*
+  
+

@@ -1,0 +1,1088 @@
+categoria:
+  categoria_1:
+    nombre: Bares
+    logo: 5379_8184_bar.png
+    thumbnail: 7241_4342_1.jpg
+    ciudad: ciudad_1
+  categoria_2:
+    nombre: Restaurantes
+    logo: 7241_4342_1.jpg
+    thumbnail: 7241_4342_1.jpg
+    ciudad: ciudad_1
+catgenerica:
+  catgenerica_1:
+    nombre: 'Sobre BTag'
+  catgenerica_2:
+    nombre: 'Para usuarios'
+  catgenerica_3:
+    nombre: 'Para empresas'
+  catgenerica_4:
+    nombre: Servicios
+  catgenerica_5:
+    nombre: Nosotros
+  catgenerica_6:
+    nombre: Normatividad
+  catgenerica_7:
+    nombre: FAQ
+ciudad:
+  ciudad_1:
+    nombre: Bogotá
+generica:
+  generica_1:
+    titulo: 'SubCat 1'
+    contenido: "<p>as dasd fasd fasd f</p>\r\n<p><img src=\"../../../uploads/generica/estacion-de-madrid-2.jpg\" alt=\"\" /></p>"
+    catgenerica: catgenerica_1
+  generica_2:
+    titulo: 'SubCat 2'
+    contenido: "<p>ads fasd fasd f</p>\r\n<p>&nbsp;</p>\r\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"../../../uploads/generica/Penguins.jpg\" alt=\"\" /></p>"
+    catgenerica: catgenerica_1
+  generica_3:
+    titulo: 'SubCat 1'
+    contenido: '<p>a sdfasd asd fasd f</p>'
+    catgenerica: catgenerica_2
+  generica_4:
+    titulo: 'SubCat 2'
+    contenido: '<p>asd fasd fasdf</p>'
+    catgenerica: catgenerica_2
+  generica_5:
+    titulo: 'SubCat 1'
+    contenido: '<p>asdf asdf asd f</p>'
+    catgenerica: catgenerica_3
+  generica_6:
+    titulo: 'SubCat 2'
+    contenido: '<p>asdfasd f</p>'
+    catgenerica: catgenerica_4
+  generica_7:
+    titulo: 'SubCat 2'
+    contenido: '<p>asd fasd f</p>'
+    catgenerica: catgenerica_6
+  generica_8:
+    titulo: 'SubCat 2'
+    contenido: '<p>afsd fasd</p>'
+    catgenerica: catgenerica_7
+oferta:
+  oferta_1:
+    nombre: 'Oferta 1'
+    imagen: 2440_desert.jpg
+    cantidad: '100'
+    fechainicio: '2008-03-02 02:02:00'
+    fechatermino: '2012-10-15 04:04:00'
+    descripcion: 'Descripciòn de la oferta'
+    tipo: Oferta
+    sitio: sitio_1
+    destacada: true
+    created_at: '2008-01-16 12:13:00'
+    updated_at: '2012-10-03 09:55:00'
+  oferta_2:
+    nombre: 'Oferta 2'
+    imagen: 1612_chrysanthemum.jpg
+    cantidad: '5'
+    fechainicio: '2007-01-01 00:00:00'
+    fechatermino: '2012-10-17 00:00:00'
+    descripcion: 's dafsad sdfg '
+    tipo: Oferta
+    sitio: sitio_1
+    destacada: true
+    created_at: '2007-01-01 00:00:00'
+    updated_at: '2012-10-03 09:58:00'
+  oferta_3:
+    nombre: 'Oferta 3'
+    imagen: 2045_hydrangeas.jpg
+    cantidad: '50'
+    fechainicio: '2007-01-01 18:00:00'
+    fechatermino: '2012-10-03 16:00:00'
+    descripcion: 'Descrio Oferta'
+    tipo: Oferta
+    sitio: sitio_1
+    destacada: true
+    created_at: '2007-01-01 00:00:00'
+    updated_at: '2007-01-01 00:10:00'
+  oferta_4:
+    nombre: 'Evento 1'
+    imagen: 4624_penguins.jpg
+    cantidad: '1'
+    fechainicio: '2016-09-07 02:01:00'
+    fechatermino: '2007-01-01 00:00:00'
+    descripcion: 'Descripcion evento 1'
+    tipo: Evento
+    sitio: sitio_1
+    destacada: true
+    created_at: '2007-01-01 00:00:00'
+    updated_at: '2012-10-04 12:10:18'
+review:
+  review_1:
+    util: '0'
+    gracioso: '0'
+    negativo: '0'
+    texto: '<p>Excelente sitio. Totalmente recomendado.</p>'
+    calificacion: '5'
+    sitio: sitio_1
+    usuario: usuario_1
+    created_at: '2013-08-26 16:15:00'
+    updated_at: '2012-10-01 14:49:01'
+  review_2:
+    util: '0'
+    gracioso: '0'
+    negativo: '0'
+    texto: '<p>Buen sitio para trabajar.</p>'
+    calificacion: '4'
+    sitio: sitio_1
+    usuario: usuario_1
+    created_at: '2008-01-02 00:00:00'
+    updated_at: '2007-01-01 00:00:00'
+  review_3:
+    util: '0'
+    gracioso: '0'
+    negativo: '0'
+    texto: 'From an action'
+    calificacion: '5'
+    sitio: sitio_1
+    usuario: usuario_1
+    created_at: '2012-10-05 10:18:45'
+    updated_at: '2012-10-05 10:18:45'
+  review_4:
+    util: '0'
+    gracioso: '0'
+    negativo: '0'
+    texto: '	zxcvzxcv'
+    calificacion: '4'
+    sitio: sitio_1
+    usuario: usuario_1
+    created_at: '2012-10-05 10:29:18'
+    updated_at: '2012-10-05 10:29:18'
+  review_5:
+    util: '0'
+    gracioso: '0'
+    negativo: '0'
+    texto: '	Gracias por calificar! :D'
+    calificacion: '5'
+    sitio: sitio_1
+    usuario: usuario_1
+    created_at: '2012-10-05 10:31:41'
+    updated_at: '2012-10-05 10:31:41'
+  review_6:
+    util: '0'
+    gracioso: '0'
+    negativo: '0'
+    texto: 'Nuevo comment :D'
+    calificacion: '2'
+    sitio: sitio_1
+    usuario: usuario_1
+    created_at: '2012-10-05 10:32:35'
+    updated_at: '2012-10-05 10:32:35'
+  review_7:
+    util: '0'
+    gracioso: '0'
+    negativo: '0'
+    texto: Works!!
+    calificacion: '5'
+    sitio: sitio_1
+    usuario: usuario_1
+    created_at: '2012-10-05 10:33:01'
+    updated_at: '2012-10-05 10:33:01'
+  review_8:
+    util: '0'
+    gracioso: '0'
+    negativo: '0'
+    texto: 'Excelente centro comercial!'
+    calificacion: '4'
+    sitio: sitio_2
+    usuario: usuario_1
+    created_at: '2012-10-05 10:33:56'
+    updated_at: '2012-10-05 10:33:56'
+  review_9:
+    util: '0'
+    gracioso: '0'
+    negativo: '0'
+    texto: UNicentro!!!
+    calificacion: '3'
+    sitio: sitio_2
+    usuario: usuario_1
+    created_at: '2012-10-05 10:34:19'
+    updated_at: '2012-10-05 10:34:19'
+  review_10:
+    util: '0'
+    gracioso: '0'
+    negativo: '0'
+    texto: 'Puedo seguir :D'
+    calificacion: '0'
+    sitio: sitio_2
+    usuario: usuario_1
+    created_at: '2012-10-05 10:36:07'
+    updated_at: '2012-10-05 10:36:07'
+  review_11:
+    util: '0'
+    gracioso: '0'
+    negativo: '0'
+    texto: 'Haciendo reviews!!'
+    calificacion: '3'
+    sitio: sitio_2
+    usuario: usuario_1
+    created_at: '2012-10-05 10:36:24'
+    updated_at: '2012-10-05 10:36:24'
+  review_12:
+    util: '0'
+    gracioso: '0'
+    negativo: '0'
+    texto: '	Test other user'
+    calificacion: '5'
+    sitio: sitio_1
+    usuario: usuario_3
+    created_at: '2012-10-05 11:08:42'
+    updated_at: '2012-10-05 11:08:42'
+  review_13:
+    util: '0'
+    gracioso: '0'
+    negativo: '0'
+    texto: 'It''s business time!'
+    calificacion: '5'
+    sitio: sitio_1
+    usuario: usuario_7
+    created_at: '2012-10-05 11:26:45'
+    updated_at: '2012-10-05 11:26:45'
+  review_14:
+    util: '0'
+    gracioso: '0'
+    negativo: '0'
+    texto: '<p>	Prueba con el p</p>'
+    calificacion: '5'
+    sitio: sitio_2
+    usuario: usuario_1
+    created_at: '2012-10-08 11:51:00'
+    updated_at: '2012-10-08 11:51:00'
+  review_15:
+    util: '0'
+    gracioso: '0'
+    negativo: '0'
+    texto: '<p>Works!!</p>'
+    calificacion: '3'
+    sitio: sitio_2
+    usuario: usuario_1
+    created_at: '2012-10-08 11:51:16'
+    updated_at: '2012-10-08 11:51:16'
+servicio:
+  servicio_1:
+    nombre: Guarderia
+  servicio_2:
+    nombre: Parqueadero
+  servicio_3:
+    nombre: Wifi
+sfGuardGroup:
+  sfGuardGroup_1:
+    name: admin
+    description: 'Administrator group'
+    created_at: '2012-09-18 11:07:55'
+    updated_at: '2012-09-18 11:07:55'
+sfGuardGroupPermission:
+  sfGuardGroupPermission_1_1:
+    Group: sfGuardGroup_1
+    Permission: sfGuardPermission_1
+    created_at: '2012-09-18 11:07:55'
+    updated_at: '2012-09-18 11:07:55'
+sfGuardPermission:
+  sfGuardPermission_1:
+    name: admin
+    description: 'Administrator permission'
+    created_at: '2012-09-18 11:07:55'
+    updated_at: '2012-09-18 11:07:55'
+sfGuardUser:
+  sfGuardUser_1:
+    first_name: John
+    last_name: Doe
+    email_address: john.doe@gmail.com
+    username: admin
+    algorithm: sha1
+    salt: dffb286e83ae9a49047fc991dc4dbeb3
+    password: f0c291a3edfe6f837c9e66f40f6f9760ec0c2a55
+    is_active: true
+    is_super_admin: true
+    last_login: '2012-10-17 15:28:45'
+    created_at: '2012-09-18 11:07:55'
+    updated_at: '2012-10-17 15:28:45'
+  sfGuardUser_2:
+    first_name: Will
+    last_name: Vlr
+    email_address: will.vlr@hotmail.com
+    username: will
+    algorithm: sha1
+    salt: 013acbb85bd0e11535513596d0aaafcc
+    password: f9b0a6c2dbd07ab0c207d0189258c1e2aaf765dc
+    is_active: true
+    is_super_admin: false
+    last_login: '2012-09-21 11:56:19'
+    created_at: '2012-09-21 11:56:19'
+    updated_at: '2012-09-21 11:56:19'
+  sfGuardUser_3:
+    first_name: master
+    last_name: master
+    email_address: master@master.com
+    username: master
+    algorithm: sha1
+    salt: 0cfd5671a4948207c6fb67ff9e56a422
+    password: 0d59d887b04cb2f3c5298f7a2badd598db05a868
+    is_active: true
+    is_super_admin: false
+    last_login: '2012-10-05 10:42:02'
+    created_at: '2012-10-05 10:42:02'
+    updated_at: '2012-10-05 10:42:02'
+  sfGuardUser_4:
+    first_name: Jean
+    last_name: Sartre
+    email_address: jean@sartre.com
+    username: jean
+    algorithm: sha1
+    salt: 33494869d48750cf0023597e15f26a12
+    password: 70603e7191f5266198eff5adbd3ca2f962ba6910
+    is_active: true
+    is_super_admin: false
+    last_login: '2012-10-05 11:08:16'
+    created_at: '2012-10-05 10:49:13'
+    updated_at: '2012-10-05 11:08:17'
+  sfGuardUser_5:
+    first_name: Ferneylen
+    last_name: Velasquez
+    email_address: ferney@iridian.co
+    username: ferney
+    algorithm: sha1
+    salt: 7353074827f1bb84e2628ca80505963a
+    password: b10f8e51beb1cf53d35a4a5e29a1b93ed8188b07
+    is_active: true
+    is_super_admin: false
+    last_login: '2012-10-05 11:11:28'
+    created_at: '2012-10-05 11:11:28'
+    updated_at: '2012-10-05 11:11:28'
+  sfGuardUser_6:
+    first_name: Ferneylen
+    last_name: master
+    email_address: master2@master.com
+    username: ferney2
+    algorithm: sha1
+    salt: a565d9a3d95af794c6552a68722c385e
+    password: 5637e5f4b7705344be72375c8ae867ae077a7b79
+    is_active: true
+    is_super_admin: false
+    last_login: '2012-10-05 11:13:27'
+    created_at: '2012-10-05 11:13:27'
+    updated_at: '2012-10-05 11:13:27'
+  sfGuardUser_7:
+    first_name: mauro
+    last_name: Caviedes
+    email_address: mauro@iridian.co
+    username: mauro
+    algorithm: sha1
+    salt: 7442c72c836330537caf1ccf6d0b5d2d
+    password: 64319f961be2206689ec5d274cb1bcd8dd4f09aa
+    is_active: true
+    is_super_admin: false
+    last_login: '2012-10-05 11:17:18'
+    created_at: '2012-10-05 11:17:18'
+    updated_at: '2012-10-05 11:17:18'
+  sfGuardUser_8:
+    first_name: jennifer
+    last_name: jennifer
+    email_address: jennifer@hotmail.com
+    username: jennifer
+    algorithm: sha1
+    salt: 30396ee383987d85f543dcf44c6cdbff
+    password: 6d805770a21037a4c4c263544a76761f2a839e61
+    is_active: true
+    is_super_admin: false
+    last_login: '2012-10-05 11:25:58'
+    created_at: '2012-10-05 11:25:58'
+    updated_at: '2012-10-05 11:25:58'
+sfGuardUserGroup:
+  sfGuardUserGroup_1_1:
+    User: sfGuardUser_1
+    Group: sfGuardGroup_1
+    created_at: '2012-09-18 11:07:55'
+    updated_at: '2012-09-18 11:07:55'
+sitio:
+  sitio_1:
+    nombre: Iridian
+    categoria: categoria_1
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Kra 15a  #125a - 26'
+    descripcion: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere, augue ut placerat tincidunt, tortor elit cursus est, ut vestibulum turpis nulla sed ligula. Phasellus et massa massa. Cras scelerisque vehicula metus, ac bibendum erat elementum at. Mauris auctor aliquam tortor ut vehicula. Donec posuere bibendum libero, nec consectetur turpis porta eget. In adipiscing, lorem sit amet luctus tincidunt, nisl leo fringilla justo, et gravida libero purus pellentesque enim. Aliquam erat volutpat. Mauris ultrices, libero et tempor laoreet, nisl lacus sagittis mi, sit amet viverra massa dui hendrerit enim. Donec dui risus, gravida quis lobortis non, eleifend non ante. Mauris arcu lorem, placerat sed faucibus tristique, consequat ut sapien. Aliquam in tincidunt purus. Vivamus justo diam, pretium sit amet vulputate non, semper in massa. Fusce facilisis blandit nisi, id porta urna condimentum eget. Mauris vehicula tincidunt mattis. Quisque at est tincidunt ante vehicula sodales sit amet ultrices lorem.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies dolor non lectus tincidunt sit amet bibendum magna ullamcorper. Duis posuere iaculis nisi, at viverra neque iaculis et. Aenean fermentum elementum nunc vel facilisis. Sed nec velit ac mauris feugiat dapibus. Cras vulputate lorem id quam hendrerit luctus. Integer sed dui id ante egestas bibendum. Nam nisi elit, varius ac vestibulum a, mollis at libero. Sed in justo in sapien ornare mollis sed tempus orci. Curabitur non nisl urna.</p>\r\n<p>Etiam ultrices tellus id arcu blandit egestas. Fusce sed risus in lacus pulvinar viverra eu non arcu. Etiam luctus pulvinar arcu, dignissim pharetra ligula pretium nec. Duis ullamcorper enim dolor. Nam vitae elementum eros. Phasellus pulvinar viverra ligula a pharetra. Ut cursus odio vitae orci cursus fermentum.</p>"
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: 6184_kitchenedgein.jpg
+    thumbnail: 2924_1.jpg
+    calificacion: '0'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '2012-09-21 16:29:00'
+    updated_at: '2012-09-25 12:38:00'
+  sitio_2:
+    nombre: Unicentro
+    categoria: categoria_2
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Kra 15a  #125a - 26'
+    descripcion: "<p>Pellentesque consectetur sodales suscipit. Quisque dictum aliquet ipsum ut vehicula. Vestibulum ornare mollis consectetur. Donec posuere condimentum mi, sed auctor nulla rutrum a. Fusce vitae quam eget dolor ultricies pulvinar a et libero. Pellentesque interdum tellus in dui molestie luctus. Donec gravida semper purus, sed malesuada mauris mattis eget. Nam eleifend malesuada venenatis.</p>\r\n<p>Suspendisse sagittis odio vitae libero aliquam ullamcorper. Donec molestie facilisis leo, non vestibulum sem mollis a. Phasellus massa nisi, dapibus a pellentesque et, euismod at massa. Curabitur lacus eros, dignissim sit amet fermentum id, mollis in ipsum. Fusce et turpis in arcu tristique blandit. Fusce ultricies orci non elit convallis euismod. Pellentesque at risus massa, in pulvinar diam. Proin posuere, odio vel condimentum vehicula, tellus velit mollis tellus, vel laoreet lorem ipsum ac ipsum. Nunc risus augue, pharetra a mollis at, gravida quis nibh. Duis fringilla viverra tincidunt. Etiam fermentum iaculis felis, eget bibendum tellus condimentum quis. Sed tincidunt fermentum eros, a lacinia sem condimentum id. Pellentesque porta, nisi eget viverra hendrerit, nulla nunc dignissim arcu, id rutrum magna nisl aliquet quam. In scelerisque, massa id interdum pharetra, risus tellus iaculis ligula, sed fringilla urna lectus quis tellus.</p>"
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: 5242_unicentro.jpg
+    thumbnail: 5593_unicentro.jpg
+    calificacion: '3'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '2009-05-02 02:02:00'
+    updated_at: '2012-10-03 15:14:00'
+  sitio_3:
+    nombre: Sismika
+    categoria: categoria_1
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Kra 15a  #125a - 26'
+    descripcion: "<p>Pellentesque consectetur sodales suscipit. Quisque dictum aliquet ipsum ut vehicula. Vestibulum ornare mollis consectetur. Donec posuere condimentum mi, sed auctor nulla rutrum a. Fusce vitae quam eget dolor ultricies pulvinar a et libero. Pellentesque interdum tellus in dui molestie luctus. Donec gravida semper purus, sed malesuada mauris mattis eget. Nam eleifend malesuada venenatis.</p>\r\n<p>Suspendisse sagittis odio vitae libero aliquam ullamcorper. Donec molestie facilisis leo, non vestibulum sem mollis a. Phasellus massa nisi, dapibus a pellentesque et, euismod at massa. Curabitur lacus eros, dignissim sit amet fermentum id, mollis in ipsum. Fusce et turpis in arcu tristique blandit. Fusce ultricies orci non elit convallis euismod. Pellentesque at risus massa, in pulvinar diam. Proin posuere, odio vel condimentum vehicula, tellus velit mollis tellus, vel laoreet lorem ipsum ac ipsum. Nunc risus augue, pharetra a mollis at, gravida quis nibh. Duis fringilla viverra tincidunt. Etiam fermentum iaculis felis, eget bibendum tellus condimentum quis. Sed tincidunt fermentum eros, a lacinia sem condimentum id. Pellentesque porta, nisi eget viverra hendrerit, nulla nunc dignissim arcu, id rutrum magna nisl aliquet quam. In scelerisque, massa id interdum pharetra, risus tellus iaculis ligula, sed fringilla urna lectus quis tellus.</p>"
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: 394_kitchenedgein.jpg
+    thumbnail: 1573_perfil.jpg
+    calificacion: '0'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '2009-03-02 02:01:00'
+    updated_at: '2012-09-25 12:38:00'
+  sitio_4:
+    nombre: 'Dunkin'''
+    categoria: categoria_1
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Calle 127 # 23-44'
+    descripcion: 'Loren ipsum '
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: ''
+    thumbnail: 1252_3.jpg
+    calificacion: '1'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  sitio_5:
+    nombre: btag
+    categoria: categoria_1
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Calle 127 # 23-45'
+    descripcion: 'Loren ipsum '
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: ''
+    thumbnail: 1252_3.jpg
+    calificacion: '4'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  sitio_6:
+    nombre: Dominos
+    categoria: categoria_1
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Calle 127 # 23-46'
+    descripcion: 'Loren ipsum '
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: ''
+    thumbnail: 1252_3.jpg
+    calificacion: '5'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  sitio_7:
+    nombre: 'Jeno''s'
+    categoria: categoria_1
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Calle 127 # 23-47'
+    descripcion: 'Loren ipsum '
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: ''
+    thumbnail: 1252_3.jpg
+    calificacion: '2'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  sitio_8:
+    nombre: Corral
+    categoria: categoria_1
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Calle 127 # 23-48'
+    descripcion: 'Loren ipsum '
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: ''
+    thumbnail: 1252_3.jpg
+    calificacion: '3'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  sitio_9:
+    nombre: Wrapps
+    categoria: categoria_1
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Calle 127 # 23-49'
+    descripcion: 'Loren ipsum '
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: ''
+    thumbnail: 1252_3.jpg
+    calificacion: '2'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  sitio_10:
+    nombre: 'El rodeo '
+    categoria: categoria_2
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Calle 127 # 23-50'
+    descripcion: 'Loren ipsum '
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: ''
+    thumbnail: 1252_3.jpg
+    calificacion: '5'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  sitio_11:
+    nombre: Parrilla
+    categoria: categoria_2
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Calle 127 # 23-51'
+    descripcion: 'Loren ipsum '
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: ''
+    thumbnail: 1252_3.jpg
+    calificacion: '2'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  sitio_12:
+    nombre: BBC
+    categoria: categoria_2
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Calle 127 # 23-52'
+    descripcion: 'Loren ipsum '
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: ''
+    thumbnail: 1252_3.jpg
+    calificacion: '1'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  sitio_13:
+    nombre: 'Casa de la cerveza'
+    categoria: categoria_2
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Calle 127 # 23-53'
+    descripcion: 'Loren ipsum '
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: ''
+    thumbnail: 1252_3.jpg
+    calificacion: '3'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  sitio_14:
+    nombre: Andres
+    categoria: categoria_2
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Calle 127 # 23-54'
+    descripcion: 'Loren ipsum '
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: ''
+    thumbnail: 1252_3.jpg
+    calificacion: '5'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  sitio_15:
+    nombre: Martinez
+    categoria: categoria_2
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Calle 127 # 23-55'
+    descripcion: 'Loren ipsum '
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: ''
+    thumbnail: 1252_3.jpg
+    calificacion: '2'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  sitio_16:
+    nombre: Oasis
+    categoria: categoria_2
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Calle 127 # 23-56'
+    descripcion: 'Loren ipsum '
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: ''
+    thumbnail: 1252_3.jpg
+    calificacion: '1'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  sitio_17:
+    nombre: 'El paradero'
+    categoria: categoria_2
+    latitud: '4.677102'
+    longitud: '-74.047804'
+    direccion: 'Calle 127 # 23-57'
+    descripcion: 'Loren ipsum '
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: ''
+    thumbnail: 1252_3.jpg
+    calificacion: '3'
+    telefono: null
+    keywords: null
+    website: null
+    horario: null
+    created_at: '0000-00-00 00:00:00'
+    updated_at: '0000-00-00 00:00:00'
+  sitio_18:
+    nombre: Nuevo
+    categoria: categoria_2
+    latitud: '4.602434'
+    longitud: '-74.07691999999997'
+    direccion: 'ads fasd fasd f'
+    descripcion: ''
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: NIL
+    thumbnail: NIL
+    calificacion: '0'
+    telefono: 'a sdfasd f'
+    keywords: null
+    website: www.nuevo.com
+    horario: 'asdf%asd fasd fasd f%a sdfasd fasd f%'
+    created_at: '2012-10-17 15:40:54'
+    updated_at: '2012-10-17 15:40:54'
+  sitio_19:
+    nombre: ''
+    categoria: categoria_1
+    latitud: ''
+    longitud: ''
+    direccion: ''
+    descripcion: ''
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: NIL
+    thumbnail: NIL
+    calificacion: '0'
+    telefono: ''
+    keywords: null
+    website: ''
+    horario: ''
+    created_at: '2012-10-17 15:55:14'
+    updated_at: '2012-10-17 15:55:14'
+  sitio_20:
+    nombre: 'ads f'
+    categoria: categoria_1
+    latitud: '4.602434'
+    longitud: '-74.07691999999997'
+    direccion: 'a sdf'
+    descripcion: ''
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: NIL
+    thumbnail: NIL
+    calificacion: '0'
+    telefono: ''
+    keywords: null
+    website: 'a sdf'
+    horario: ' adsfasd%a sdfasd f%ads fasd %'
+    created_at: '2012-10-17 15:56:21'
+    updated_at: '2012-10-17 15:56:21'
+  sitio_21:
+    nombre: 'ads f'
+    categoria: categoria_1
+    latitud: '4.602434'
+    longitud: '-74.07691999999997'
+    direccion: 'a sdf'
+    descripcion: ''
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: NIL
+    thumbnail: NIL
+    calificacion: '0'
+    telefono: ''
+    keywords: null
+    website: 'a sdf'
+    horario: ' adsfasd%a sdfasd f%ads fasd %'
+    created_at: '2012-10-17 15:57:09'
+    updated_at: '2012-10-17 15:57:09'
+  sitio_22:
+    nombre: 'ads f'
+    categoria: categoria_1
+    latitud: '4.602434'
+    longitud: '-74.07691999999997'
+    direccion: 'a sdf'
+    descripcion: ''
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: NIL
+    thumbnail: NIL
+    calificacion: '0'
+    telefono: ''
+    keywords: null
+    website: 'a sdf'
+    horario: ' adsfasd%a sdfasd f%ads fasd %'
+    created_at: '2012-10-17 15:57:17'
+    updated_at: '2012-10-17 15:57:17'
+  sitio_23:
+    nombre: 'ads f'
+    categoria: categoria_1
+    latitud: '4.602434'
+    longitud: '-74.07691999999997'
+    direccion: 'a sdf'
+    descripcion: ''
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: NIL
+    thumbnail: NIL
+    calificacion: '0'
+    telefono: ''
+    keywords: null
+    website: 'a sdf'
+    horario: ' adsfasd%a sdfasd f%ads fasd %'
+    created_at: '2012-10-17 15:57:18'
+    updated_at: '2012-10-17 15:57:18'
+  sitio_24:
+    nombre: 'ads f'
+    categoria: categoria_1
+    latitud: '4.602434'
+    longitud: '-74.07691999999997'
+    direccion: 'a sdf'
+    descripcion: ''
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: NIL
+    thumbnail: NIL
+    calificacion: '0'
+    telefono: ''
+    keywords: null
+    website: 'a sdf'
+    horario: ' adsfasd%a sdfasd f%ads fasd %'
+    created_at: '2012-10-17 15:57:18'
+    updated_at: '2012-10-17 15:57:18'
+  sitio_25:
+    nombre: 'ads f'
+    categoria: categoria_1
+    latitud: '4.602434'
+    longitud: '-74.07691999999997'
+    direccion: 'a sdf'
+    descripcion: ''
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: NIL
+    thumbnail: NIL
+    calificacion: '0'
+    telefono: ''
+    keywords: null
+    website: 'a sdf'
+    horario: ' adsfasd%a sdfasd f%ads fasd %'
+    created_at: '2012-10-17 15:57:18'
+    updated_at: '2012-10-17 15:57:18'
+  sitio_26:
+    nombre: '654'
+    categoria: categoria_1
+    latitud: '465'
+    longitud: '4654'
+    direccion: '65'
+    descripcion: ''
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: NIL
+    thumbnail: NIL
+    calificacion: '0'
+    telefono: '465'
+    keywords: null
+    website: '654'
+    horario: 654%asdfasdf%asdfasdfasdf%
+    created_at: '2012-10-17 16:02:02'
+    updated_at: '2012-10-17 16:02:02'
+  sitio_27:
+    nombre: '654'
+    categoria: categoria_1
+    latitud: '465'
+    longitud: '4654'
+    direccion: '65'
+    descripcion: ''
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: NIL
+    thumbnail: NIL
+    calificacion: '0'
+    telefono: '465'
+    keywords: null
+    website: '654'
+    horario: 654%asdfasdf%asdfasdfasdf%
+    created_at: '2012-10-17 16:02:48'
+    updated_at: '2012-10-17 16:02:48'
+  sitio_28:
+    nombre: '654'
+    categoria: categoria_1
+    latitud: '465'
+    longitud: '4654'
+    direccion: '65'
+    descripcion: ''
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: NIL
+    thumbnail: NIL
+    calificacion: '0'
+    telefono: '465'
+    keywords: null
+    website: '654'
+    horario: 654%asdfasdf%asdfasdfasdf%
+    created_at: '2012-10-17 16:06:58'
+    updated_at: '2012-10-17 16:06:58'
+  sitio_29:
+    nombre: 'sdfg '
+    categoria: categoria_1
+    latitud: '4.618838775817071'
+    longitud: '-74.0807609233093'
+    direccion: 'sd fg'
+    descripcion: ''
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: NIL
+    thumbnail: NIL
+    calificacion: '0'
+    telefono: 'sdf g'
+    keywords: null
+    website: 'sd f'
+    horario: 'sfdg sdf g%sdf gsdf g%sdf gsdf g%'
+    created_at: '2012-10-17 16:15:56'
+    updated_at: '2012-10-17 16:15:56'
+  sitio_30:
+    nombre: ''
+    categoria: categoria_1
+    latitud: ''
+    longitud: ''
+    direccion: ''
+    descripcion: ''
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: NIL
+    thumbnail: NIL
+    calificacion: '0'
+    telefono: ''
+    keywords: null
+    website: ''
+    horario: ''
+    created_at: '2012-10-17 16:29:35'
+    updated_at: '2012-10-17 16:29:35'
+  sitio_31:
+    nombre: sdfasdfasdf
+    categoria: categoria_1
+    latitud: '4.443628404736433'
+    longitud: '-73.93135115234372'
+    direccion: asdfas
+    descripcion: ''
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: NIL
+    thumbnail: NIL
+    calificacion: '0'
+    telefono: asdfasdf
+    keywords: null
+    website: asdfasdf
+    horario: asdfasdf%asdfasdf%
+    created_at: '2012-10-17 16:34:42'
+    updated_at: '2012-10-17 16:34:42'
+  sitio_32:
+    nombre: sdfasdfasdf
+    categoria: categoria_1
+    latitud: '4.443628404736433'
+    longitud: '-73.93135115234372'
+    direccion: asdfas
+    descripcion: ''
+    usuario: usuario_1
+    ciudad: ciudad_1
+    imagen: NIL
+    thumbnail: NIL
+    calificacion: '0'
+    telefono: asdfasdf
+    keywords: null
+    website: asdfasdf
+    horario: asdfasdf%asdfasdf%
+    created_at: '2012-10-17 16:34:53'
+    updated_at: '2012-10-17 16:34:53'
+SitioServicio:
+  SitioServicio_18_1:
+    sitio: sitio_18
+    servicio: servicio_1
+  SitioServicio_20_1:
+    sitio: sitio_20
+    servicio: servicio_1
+  SitioServicio_21_1:
+    sitio: sitio_21
+    servicio: servicio_1
+  SitioServicio_22_1:
+    sitio: sitio_22
+    servicio: servicio_1
+  SitioServicio_23_1:
+    sitio: sitio_23
+    servicio: servicio_1
+  SitioServicio_24_1:
+    sitio: sitio_24
+    servicio: servicio_1
+  SitioServicio_25_1:
+    sitio: sitio_25
+    servicio: servicio_1
+  SitioServicio_26_1:
+    sitio: sitio_26
+    servicio: servicio_1
+  SitioServicio_27_1:
+    sitio: sitio_27
+    servicio: servicio_1
+  SitioServicio_28_1:
+    sitio: sitio_28
+    servicio: servicio_1
+  SitioServicio_29_1:
+    sitio: sitio_29
+    servicio: servicio_1
+  SitioServicio_19_2:
+    sitio: sitio_19
+    servicio: servicio_2
+  SitioServicio_20_2:
+    sitio: sitio_20
+    servicio: servicio_2
+  SitioServicio_21_2:
+    sitio: sitio_21
+    servicio: servicio_2
+  SitioServicio_22_2:
+    sitio: sitio_22
+    servicio: servicio_2
+  SitioServicio_23_2:
+    sitio: sitio_23
+    servicio: servicio_2
+  SitioServicio_24_2:
+    sitio: sitio_24
+    servicio: servicio_2
+  SitioServicio_25_2:
+    sitio: sitio_25
+    servicio: servicio_2
+  SitioServicio_26_2:
+    sitio: sitio_26
+    servicio: servicio_2
+  SitioServicio_27_2:
+    sitio: sitio_27
+    servicio: servicio_2
+  SitioServicio_28_2:
+    sitio: sitio_28
+    servicio: servicio_2
+  SitioServicio_29_2:
+    sitio: sitio_29
+    servicio: servicio_2
+  SitioServicio_18_3:
+    sitio: sitio_18
+    servicio: servicio_3
+usuario:
+  usuario_1:
+    foto: 5878_john_doe.jpg
+    fechanacimiento: '2007-02-03'
+    sexo: M
+    pais: Colombia
+    ciudad: Bogot
+  usuario_2:
+    foto: 'asdfas '
+    fechanacimiento: '2008-01-02'
+    sexo: M
+    pais: Colombia
+    ciudad: Bogot
+  usuario_3:
+    foto: 3705_images.jpg
+    fechanacimiento: '2008-01-02'
+    sexo: F
+    pais: Colombia
+    ciudad: Bogot
+  usuario_4:
+    foto: null
+    fechanacimiento: '2008-04-02'
+    sexo: M
+    pais: Colombia
+    ciudad: Bogot
+  usuario_5:
+    foto: null
+    fechanacimiento: '2007-01-01'
+    sexo: M
+    pais: Colombia
+    ciudad: Bogot
+  usuario_6:
+    foto: null
+    fechanacimiento: '2007-02-02'
+    sexo: F
+    pais: Colombia
+    ciudad: Bogot
+  usuario_7:
+    foto: 2368_6yydf_normal_emo_girl_18.jpg
+    fechanacimiento: '2007-01-01'
+    sexo: F
+    pais: Colombia
+    ciudad: Bogot

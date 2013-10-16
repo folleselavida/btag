@@ -1,0 +1,138 @@
+<?php slot('perfil','active')?>
+<?php slot('descripcion','')?>
+<?php slot('keywords','')?>
+	
+<style>
+	#columna_izq {
+		visibility: <?php echo $colIzq ?> !important;
+	}
+	
+	#columna_der {
+		visibility: <?php echo $colDer ?> !important;
+	}
+</style>
+
+<link type="text/css" href="/css/jquery.si.css" rel="stylesheet" media="all" />
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("input.file").si();
+	});
+</script>
+
+<div id="crearcol1">
+	<div class="titulo2">
+		<img src="/images/tags/btag2.png" alt="Review del día de business tag" />
+		<p>
+			Crear Perfil en Business Tag
+		</p>
+	</div>
+	<div class="cont_crearperfil contenedor">
+		<div id="fbcrear">
+			<p>
+				Hi, do you want to use information from your Facebook profile to make sign up faster?
+			</p>
+			<img src="/images/basics/btag-fb.png" alt="btag connect with facebook" id="btag-fb" />
+			<a id="fbconnect2"></a>
+		</div>
+		<form class="crear_perfil">
+			<label>
+				Email:
+			</label>
+			<input	type="text" />
+			<label>
+				Contraseña:
+			</label>
+			<input	type="password" />
+			<label>
+				Confirmar contraseña:
+			</label>
+			<input	type="password" />
+			<label>
+				Fecha de Nacimiento:
+			</label>
+			
+			<label class="mini_label">
+				Dia:
+			</label>
+			<input	type="text" class="mini_input"/>
+			<label class="mini_label">
+				Mes:
+			</label>
+			<input	type="text" class="mini_input"/>
+			<label class="mini_label">
+				Año:
+			</label>
+			<input	type="text" class="mini_input"/>
+			
+			<div class="col_fi">
+				<label>Imagen</label>
+				<div class="wrap_file">
+					<input type="file" class="file" name="file" value="buscaree" />
+				</div>
+				<div class="img">
+					<img src="/images/pruebas/home/perfil.jpg" alt="foto de creacion de perfil" />
+				</div>
+			</div>
+			<div class="col_fd">
+				<label>
+					Sexo:
+				</label>
+				
+				<input id="masculino" type="radio" value="escuela" name="grupo1">
+				<label class="mini_label2">
+					Masculino
+				</label>
+				<input id="femenino" type="radio" value="web" name="grupo1">
+				<label class="mini_label2">
+					Femenino
+				</label>
+				
+				
+				<label>
+					Departamento:
+				</label>
+				<select>
+					<option>
+						País
+					</option>
+				</select>
+				
+				<label>
+					Ciudad
+				</label>
+				<select>
+					<option>
+						Ciudad
+					</option>
+				</select>
+			</div>
+			<a href="" class="submit">Crear</a>
+		</form>
+	</div>
+</div>
+
+<div id="crearcol2">
+	<div class="titulo2">
+		<img src="/images/tags/btag2.png" alt="Review del día de business tag" />
+		<p>
+			¿Ya eres usuario?
+		</p>
+	</div>
+	<div class="cont_crearperfil contenedor">
+		<form class="crear_perfil">
+			<label>
+				Email:
+			</label>
+			<input	type="text" />
+			<label>
+				Password:
+			</label>
+			<input	type="password" />
+			<a href="" class="submit">Ingresar</a>
+			<a class="olvidar"> ¿Olvidaste tu contraseña? </a>
+		</form>
+		
+	</div>
+	
+	<div id="publi_lat2"> </div>
+</div>

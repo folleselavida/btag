@@ -1,0 +1,74 @@
+<?php slot('perfil','active')?>
+<?php slot('descripcion','')?>
+<?php slot('keywords','')?>
+
+
+<?php $user=Iridian::getUser()?>
+
+	
+<style>
+	#columna_izq {
+		visibility: <?php echo $colIzq ?> !important;
+	}
+	
+	#columna_der {
+		visibility: <?php echo $colDer ?> !important;
+	}
+</style>
+
+<div id="pcol1">
+	<div class="info_perfil">
+		<div class="titulo2">
+			<img src="/images/tags/perfil.png" alt="Review del día de business tag" />
+			<p>
+				Perfil
+			</p>
+		</div>
+		
+
+	<?php include_partial("perfil/perfilcentro", array("perfil"=>$perfil));?>
+
+	</div>
+	
+	<div class="info_perfil">
+		<div class="titulo2">
+			<img src="/images/tags/perfil.png" alt="Review del día de business tag" />
+			<p>
+				Perfil
+			</p>
+		</div>
+		
+		<div class="center_perfil">
+			<h3>
+				Promociones Reclamadas
+			</h3>
+			<?php include_partial('user_offer', array('user_offer' => $user_offer) )?>
+			
+			<h3>
+				No se han hecho efectivas:
+			</h3>
+			<?php include_partial('user_offer', array('user_offer' => $user_offer2) )?>
+		</div>
+	</div>
+</div>
+
+<div id="pcol2">
+	<div class="titulo2">
+		<img src="/images/tags/btag2.png" alt="Review del día de business tag" />
+		<p>
+		 
+			Ultimos Reviews
+		</p>
+	</div>
+	
+	
+	<div id="wrap_review">
+		<?php include_partial('review', array('reviews' => $reviews, "nombre"=>$user->getGuardUser()->getName())) ?>
+	</div>
+	
+</div>
+
+<div id="pcol3">
+	<div id="publi_lat"> </div>
+</div>
+

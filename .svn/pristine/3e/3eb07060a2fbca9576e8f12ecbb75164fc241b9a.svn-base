@@ -1,0 +1,60 @@
+<?php slot('registro','active')?>
+<?php slot('descripcion','')?>
+<?php slot('keywords','')?>
+	
+<style>
+	#columna_izq {
+		visibility: <?php echo $colIzq ?> !important;
+	}
+	
+	#columna_der {
+		visibility: <?php echo $colDer ?> !important;
+	}
+</style>
+
+
+<div id="crearcol1">
+	<div class="titulo2">
+		<img src="/images/tags/btag2.png" alt="Review del día de business tag" />
+		<p>
+			¡Registrate!
+		</p>
+	</div>
+	<div class="cont_crearperfil contenedor">
+		<form class="crear_perfil">
+			<p>¡Porfavor ingresa tus datos y  entra!   </p>
+			<label>
+				Email:
+			</label>
+			<input	type="text" />
+			<label>
+				Password:
+			</label>
+			<input	type="password" />
+			<input type="submit" value="Registrar" />
+		</form>
+	</div>
+</div>
+
+<div id="crearcol2">
+	<div class="titulo2">
+		<img src="/images/tags/btag2.png" alt="Review del día de business tag" />
+		<p>
+			¿Aun no eres usuario?
+		</p>
+	</div>
+	<div class="cont_crearperfil contenedor">
+		<form class="crear_perfil">
+			<p>No Hay Lío ¡Registrate y entra!   : ) </p>
+			<label>
+				Email:
+			</label>
+			<input	type="text" />
+			<label>
+				Password:
+			</label>
+			<input	type="password" />
+			<input type="submit" value="Acceder" />
+		</form>
+	</div>
+</div>

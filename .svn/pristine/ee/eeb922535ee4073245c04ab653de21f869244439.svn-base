@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * banner actions.
+ *
+ * @package    aa
+ * @subpackage banner
+ * @author     Your name here
+ * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ */
+class bannerComponents extends sfComponents
+{
+	public function executeFooter(sfWebRequest $request)
+	{
+		
+// 		SELECT
+// 		catgenerica.id,
+// 		catgenerica.nombre,
+// 		generica.titulo,
+// 		generica.contenido,
+// 		generica.catgenerica_id
+// 		FROM
+// 		catgenerica
+// 		INNER JOIN generica ON generica.catgenerica_id = catgenerica.id
+		
+		
+		$q = Doctrine_Query::create()
+		->select('g.titulo, c.nombre')
+				->from("catgenerica c")
+				->innerJoin('c.genericas g')
+				->orderBy("c.id asc");
+		$this->genericas = $q->fetchArray();
+	}
+	
+}

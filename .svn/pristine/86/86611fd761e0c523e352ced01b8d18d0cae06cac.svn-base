@@ -1,0 +1,420 @@
+---
+detect_relations: true
+options:
+  collate: latin1_swedish_ci
+  charset: latin1
+  type: InnoDB
+
+categoria:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    nombre:
+      type: string(255)
+      notnull: true
+    logo:
+      type: string(255)
+      notnull: true
+    thumbnail:
+      type: string(255)
+      notnull: true
+    ciudad_id:
+      type: integer(4)
+      notnull: true
+  relations:
+    ciudad:
+      class: ciudad
+      local: ciudad_id
+      foreign: id
+      foreignAlias: categorias
+  indexes:
+    fk_categoria_ciudad1:
+      fields: [ciudad_id]
+
+review:
+  actAs: { Timestampable: ~ }
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    util:
+      type: integer(4)
+      notnull: true
+      default: 0
+    gracioso:
+      type: integer(4)
+      notnull: true
+      default: 0
+    negativo:
+      type: string(255)
+      notnull: true
+      default: 0
+    texto:
+      type: string(2000)
+      notnull: true
+    calificacion:
+      type: enum
+      values: ['1','2','3','4','5']
+      notnull: true
+    sitio_id:
+      type: integer(4)
+      notnull: true
+    usuario_id:
+      type: integer(4)
+      notnull: true
+  relations:
+    sitio:
+      class: sitio
+      local: sitio_id
+      foreign: id
+      foreignAlias: reviews
+    usuario:
+      class: usuario
+      local: usuario_id
+      foreign: id
+      foreignAlias: reviews
+  indexes:
+    fk_review_sitio1:
+      fields: [sitio_id]
+    fk_review_usuario1_idx:
+      fields: [usuario_id]
+
+
+sitio:
+  actAs: { Timestampable: ~ }
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    nombre:
+      type: string(255)
+    categoria_id:
+      type: integer(4)
+      notnull: true
+    latitud:
+      type: string(255)
+      notnull: true
+    longitud:
+      type: string(255)
+      notnull: true
+    direccion:
+      type: string(255)
+      notnull: true
+    descripcion:
+      type: string(10000)
+      notnull: true
+    usuario_id:
+      type: integer(4)
+      notnull: true
+    ciudad_id:
+      type: integer(4)
+      notnull: true
+    imagen:
+      type: string(255)
+      notnull: true
+    thumbnail:
+      type: string(255)
+      notnull: true
+    calificacion:
+      type: string(45)
+      notnull: true
+      default: 0
+  relations:
+    categoria:
+      class: categoria
+      local: categoria_id
+      foreign: id
+      foreignAlias: sitioes
+    usuario:
+      class: usuario
+      local: usuario_id
+      foreign: id
+      foreignAlias: sitioes
+    ciudad:
+      class: ciudad
+      local: ciudad_id
+      foreign: id
+      foreignAlias: sitioes
+  indexes:
+    fk_sitio_categoria1:
+      fields: [categoria_id]
+    fk_sitio_usuario1:
+      fields: [usuario_id]
+    fk_sitio_ciudad1:
+      fields: [ciudad_id]
+
+
+
+horario:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    horario:
+      type: string(255)
+
+servicio:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    nombre:
+      type: string(255)
+      notnull: true
+    texto:
+      type: string(255)
+
+generica:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    titulo:
+      type: string(255)
+      notnull: true
+    contenido:
+      type: string(20000)
+      notnull: true
+    catgenerica_id:
+      type: integer(4)
+      notnull: true
+  relations:
+    catgenerica:
+      class: catgenerica
+      local: catgenerica_id
+      foreign: id
+      foreignAlias: genericas
+  indexes:
+    fk_generica_catgenerica1:
+      fields: [catgenerica_id]
+
+ciudad:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    nombre:
+      type: string(255)
+
+catgenerica:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    nombre:
+      type: string(255)
+
+galeria:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    imagen:
+      type: string(255)
+    sitio_id:
+      type: integer(4)
+      notnull: true
+  relations:
+    sitio:
+      class: sitio
+      local: sitio_id
+      foreign: id
+      foreignAlias: galerias
+  indexes:
+    fk_galeria_sitio1:
+      fields: [sitio_id]
+
+oferta:
+  actAs: { Timestampable: ~ }
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    nombre:
+      type: string(255)
+    imagen:
+      type: string(255)
+    cantidad:
+      type: integer(4)
+      default: 0
+    fechainicio:
+      type: timestamp
+      notnull: true
+    fechatermino:
+      type: timestamp
+    descripcion:
+      type: string(10000)
+      notnull: true
+    tipo:
+      type: enum
+      values: ['Oferta','Oferta CI','Evento']
+      notnull: true
+    sitio_id:
+      type: integer(4)
+      notnull: true
+    destacada:
+      type: boolean
+      notnull: true
+      default: false
+  relations:
+    sitio:
+      class: sitio
+      local: sitio_id
+      foreign: id
+      foreignAlias: ofertas
+  indexes:
+    fk_oferta_sitio1_idx:
+      fields: [sitio_id]
+
+comentario:
+  actAs: { Timestampable: ~ }
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    contenido:
+      type: string(2000)
+    usuario_id:
+      type: integer(4)
+      notnull: true
+    review_id:
+      type: integer(4)
+      notnull: true
+  relations:
+    usuario:
+      class: usuario
+      local: usuario_id
+      foreign: id
+      foreignAlias: comentarioes
+    review:
+      class: review
+      local: review_id
+      foreign: id
+      foreignAlias: comentarioes
+  indexes:
+    fk_comentario_usuario1:
+      fields: [usuario_id]
+    fk_comentario_review1:
+      fields: [review_id]
+
+contacto:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+    email:
+      type: string(255)
+      notnull: true
+
+
+
+
+usuario:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+      autoincrement: true
+    foto:
+      type: string(255)
+    fechanacimiento:
+      type: date
+      notnull: true
+    sexo:
+      type: enum
+      values: ['M','F']
+    pais:
+      type: string(255)
+    ciudad:
+      type: string(255)
+  relations:
+    sfGuardUser:
+      class: sfGuardUser
+      local: id
+      foreign: id
+      type: one
+      foreignType: one
+      foreignAlias: Profile
+      
+SitioServicio:
+  tableName: sitio_has_servicio
+  columns:
+    sitio_id:
+      type: integer(4)
+      primary: true
+      notnull: true
+    servicio_id:
+      type: integer(4)
+      primary: true
+      notnull: true
+  relations:
+    sitio:
+      class: sitio
+      local: sitio_id
+      foreign: id
+      foreignAlias: sitio_has_servicioes
+    servicio:
+      class: servicio
+      local: servicio_id
+      foreign: id
+      foreignAlias: sitio_has_servicioes
+  indexes:
+    fk_sitio_has_servicio_servicio1:
+      fields: [servicio_id]
+    fk_sitio_has_servicio_sitio1:
+      fields: [sitio_id]      
+             
+
+SitioHorario:
+  tableName: sitio_has_horario
+  columns:
+    sitio_id:
+      type: integer(4)
+      primary: true
+      notnull: true
+    horario_id:
+      type: integer(4)
+      primary: true
+      notnull: true
+  relations:
+    sitio:
+      class: sitio
+      local: sitio_id
+      foreign: id
+      foreignAlias: sitio_has_horarioes
+    horario:
+      class: horario
+      local: horario_id
+      foreign: id
+      foreignAlias: sitio_has_horarioes
+  indexes:
+    fk_sitio_has_horario_horario1:
+      fields: [horario_id]
+    fk_sitio_has_horario_sitio1:
+      fields: [sitio_id]
+      

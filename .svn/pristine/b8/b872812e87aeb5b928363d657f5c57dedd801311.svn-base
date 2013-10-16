@@ -1,0 +1,14 @@
+<div class="lb" id="lb_maps">
+	<div class="int_lb_maps int_lb contenedor">
+		<div class="titulo2">
+			<img src="/images/tags/btag2.png" alt="Paso1" />
+			<p>
+				Google Maps
+			</p>
+			<a class="cerrar_lb" href="javascript: lb2('lb_maps')">cerrar</a>
+		</div>
+		<div id="map_canvas2">
+		</div>
+		<a href="" class="submit" style="margin-right: 22px">Confirmar Posición</a>
+	</div>
+</div>

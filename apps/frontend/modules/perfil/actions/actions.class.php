@@ -1,0 +1,103 @@
+<?php
+
+/**
+ * perfil actions.
+ *
+ * @package    AUV
+ * @subpackage perfil
+ * @author     
+ * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ */
+class perfilActions extends sfActions
+{
+ /**
+  * Executes index action
+  *
+  * @param sfRequest $request A request object
+  */
+  public function executeIndex(sfWebRequest $request)
+  {
+  	$this->colIzq = 'visible';
+  	$this->colDer = 'visible';
+  	$this->user_offer = $this-> user_offer();
+  	$this->user_offer2 = $this-> user_offer2();
+  	
+  	$id = $request->getParameter("id");
+
+
+//Informacion del usuario::
+
+  	$q = Doctrine_Query::create()
+  	->select('u.*, sf.first_name,sf.last_name, sf.email_address,sf.created_at')
+  	->from("usuario u")
+  	->innerJoin('u.sfGuardUser sf')
+  	->where("u.id = sf.id")
+  	->where("sf.id = ?", $id);
+  	$this->perfil = $q->fetchOne();
+  	
+  	
+//   	Review por usuario
+	
+  	$q = Doctrine_Query::create()
+  	->select('u.*, sf.*, r.*, s.*')
+  	->from("usuario u")
+  	->innerJoin('u.sfGuardUser sf')
+  	->where("u.id = sf.id")
+  	->innerJoin('u.reviews r')
+  	->innerJoin('r.sitio s')
+  	->where("r.sitio_id = s.id")
+  	->where("u.id = ?", $id)
+  	->orderBy("r.created_at desc");
+  	$this->reviews = $q->fetchArray();
+
+//   	$this->reviews = Doctrine_Core::getTable('review')
+//   	->createQuery('a')
+//   	->orderBy("created_at desc")
+//   	->limit(8)
+//   	->execute();
+  	
+  	
+  	//TODO: Business tags, Check ins en el perfil.
+//   	Promociones reclamadas
+// No reclamadas
+  	
+  	
+  	
+  }
+  
+  public function executeCrearPerfil(sfWebRequest $request)
+  {
+  
+  
+  if($this->getUser()->isAuthenticated()){
+  	
+  $this->redirect("/perfil/" .$this->getUser()->getGuardUser()->getFirstName()."/".$this->getUser()->getProfile()->getId());
+  		}
+  		
+  		
+  $this->form = new sfGuardRegisterForm();  		
+  $this->colIzq = 'visible';
+  $this->colDer = 'hidden';
+  }
+  
+  public function review(){
+  	$rev[] = array(5, '18/09/12', 'fernando_caviedes', 'hamburgueseria', '<p>Praesent ornare libero et diam sagittis a scelerisque neque hendrerit. Donec id quam a nisl lobortis convallis. Vivamus eget velit at nisl laoreet faucibus. Sed faucibus suscipit est. Nunc vitae enim libero. Fusce non tellus nisi, ac accumsan erat. Suspendisse ac sapien erat, quis cursus ipsum. </p>');
+  	$rev[] = array(5, '17/09/12', 'fernando_caviedes', 'hamburgueseria', '<p>Praesent ornare libero et diam sagittis a scelerisque neque hendrerit. Donec id quam a nisl lobortis convallis. Vivamus eget velit at nisl laoreet faucibus. Sed faucibus suscipit est. Nunc vitae enim libero. Fusce non tellus nisi, ac accumsan erat. Suspendisse ac sapien erat, quis cursus ipsum. </p>');
+  	$rev[] = array(5, '16/09/12', 'fernando_caviedes', 'hamburgueseria', '<p>Praesent ornare libero et diam sagittis a scelerisque neque hendrerit. Donec id quam a nisl lobortis convallis. Vivamus eget velit at nisl laoreet faucibus. Sed faucibus suscipit est. Nunc vitae enim libero. Fusce non tellus nisi, ac accumsan erat. Suspendisse ac sapien erat, quis cursus ipsum. </p>');
+  
+  	return $rev;
+  }
+  
+  public function user_offer(){
+  	$ofer[] = array('50% de descuento en hamburguesas al carbon más 2 adiciones', 'hamburgueseria', 'La Hamburguesería', '15/10/12');
+  	$ofer[] = array('50% de descuento en hamburguesas al carbon más 2 adiciones', 'hamburgueseria', 'La Hamburguesería', '15/10/12');
+  
+  	return $ofer;
+  }
+  public function user_offer2(){
+  	$ofer[] = array('50% de descuento en hamburguesas al carbon más 2 adiciones', 'hamburgueseria', 'La Hamburguesería', null);
+  	$ofer[] = array('50% de descuento en hamburguesas al carbon más 2 adiciones', 'hamburgueseria', 'La Hamburguesería', null);
+  
+  	return $ofer;
+  }
+}

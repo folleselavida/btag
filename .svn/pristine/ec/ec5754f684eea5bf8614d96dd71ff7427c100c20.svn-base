@@ -1,0 +1,28 @@
+<form id="newsite">
+	<fieldset>
+		<div class="newsite_c1">
+			<label for="sitio">
+				Nombre del Sitio
+			</label>
+			<input type="text" name="sitio">
+			<label for="url">
+				URL Website
+			</label>
+			<input type="text" name="url">
+			
+			<label for="categoria">
+				Categoria a la que pertenece
+			</label>
+			<select>
+				<option>
+					País
+				</option>
+			</select>
+			
+			<label for="hora">
+				Horario
+			</label>
+			<input type="text" name="hora">
+		</div>
+	</fieldset>
+</form>

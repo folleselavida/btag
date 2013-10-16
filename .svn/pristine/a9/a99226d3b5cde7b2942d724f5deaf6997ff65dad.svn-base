@@ -1,0 +1,15 @@
+<?php foreach($sitios as $sit): ?>
+	<div class="info_sitios">
+		<img src="/images/tags/<?php echo $sit[0]?>s.png" alt="tag business tag" class ="tag1"/>
+		<a href="<?php echo url_for2('sitio', array('id' => $sit[1] ) ) ?>">
+			<img src="/images/pruebas/home/<?php echo $sit[2]?>.jpg" alt="tag business tag" class="img" />
+		</a>
+		<a class="tit" href="<?php echo url_for2('sitio', array('id' => $sit[1] ) ) ?>">
+			<?php echo $sit[3]?>
+		</a>
+		<p>
+			<?php echo $sit[4]?> <br/>
+			<?php echo $sit[5]?>
+		</p>
+	</div>
+<?php endforeach; ?>

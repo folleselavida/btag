@@ -1,0 +1,32 @@
+<?php foreach($review as $rev):?>
+	<div class="reviews">
+		<img class="tag2" alt="tag business tag" src="/images/tags/<?php echo $rev[0] ?>s.png">
+		<a href="<?php echo url_for2('sitio', array('id' => $rev[7] ) ) ?>">
+			<?php echo $rev[1] ?>
+		</a>
+		<div class="review_div1">
+			<div class="review_div1">
+				<h2>
+					Categorias:
+				</h2>
+				<h3>
+					<?php echo $rev[2] ?>
+				</h3>
+			</div>
+			<h4>
+				<?php echo $rev[3] ?>
+			</h4>
+		</div>
+		<div class="review_div2">
+			<h4>
+				<?php echo $rev[4] ?>
+			</h4>
+			<h4>
+				<?php echo $rev[5] ?>
+			</h4>
+		</div>
+		<?php echo html_entity_decode($rev[6]) ?>
+	</div>
+<?php endforeach; ?>
+
+<a id="ver_rev" class="ver_mas" href="">ver mas</a>

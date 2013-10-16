@@ -1,0 +1,19 @@
+<div class="wrap_ofer">
+	<?php foreach($ofer as $i => $prom): ?>
+		<div class="ofer">
+			<a href="javascript: lb('lb_desc_<?php echo $tipo ?>')" >
+				<img src="/images/pruebas/sitio/<?php echo $prom[0]?>" alt="oferta <?php echo $i ?> business tag" />
+			</a>
+			<h1>
+				<?php echo $prom[1]?>
+			</h1>
+			<p>
+				<?php echo $titulo?>
+			</p>
+			<h2>
+				<?php echo $prom[2]?>
+			</h2>
+		</div>
+			
+	<?php endforeach; ?>
+</div>

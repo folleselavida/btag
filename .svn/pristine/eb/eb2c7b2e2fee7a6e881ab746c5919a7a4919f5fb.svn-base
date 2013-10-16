@@ -1,0 +1,17 @@
+---
+detect_relations: true
+options:
+  collate: latin1_spanish_ci
+  charset: latin1
+  type: InnoDB
+
+contacto:
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      notnull: true
+    email:
+      type: string(255)
+      notnull: true
+

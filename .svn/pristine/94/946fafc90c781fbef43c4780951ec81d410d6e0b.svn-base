@@ -1,0 +1,29 @@
+<?php foreach($coment as $com):?>
+	<div class="coments">
+		<div class="perfil noBorder">
+			<img src="/images/tags/<?php echo $com[0]?>s.png" alt=" Calificación a <?php echo $com[3]?>" class="tag2" />
+			<a href="<?php echo url_for2('sitio', array('id' => $com[1] ) ) ?>" class="img">
+				<img src="/images/pruebas/home/<?php echo $com[2]?>.jpg" alt=" Review de <?php echo $com[3]?>"  />
+			</a>
+			
+			<p>
+				<?php echo $com[3]?> <br/>
+				<?php echo $com[4]?> Reviews
+			</p>
+		</div>
+		<div class="text_review2">
+			<h1>
+				<?php echo $com[5]?>
+			</h1>
+			<h2>
+				Dirección:
+			</h2>
+			<p class="black">
+				Cra 4A No. 27 - 27
+			</p>
+			<?php echo html_entity_decode($com[6])?>
+		</div>
+	</div>	
+<?php endforeach;?>	
+
+<a id="ver_com" class="ver_mas" href="">ver mas</a>

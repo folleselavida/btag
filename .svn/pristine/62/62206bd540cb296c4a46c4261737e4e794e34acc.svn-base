@@ -1,0 +1,135 @@
+<?php slot('home','active')?>
+<?php slot('descripcion','')?>
+<?php slot('keywords','')?>
+	
+<style>
+	#columna_izq {
+		visibility: <?php echo $colIzq ?> !important;
+	}
+	
+	#columna_der {
+		visibility: <?php echo $colDer ?> !important;
+	}
+</style>
+	
+<div id="cont_lomejor">
+	<div class="lomejor">
+		<div class="titulo2">
+			<img src="/images/tags/mejor.png" alt="lo mejor de business tag" />
+			<p>
+				Ultimos Sitios
+			</p>
+		</div>
+	</div>
+	<div id="cycle_home">
+		<div class="int_cycle_home">
+		</div>
+		<div class="int_cycle_home" style="background: red">
+		</div>
+	</div>
+	<div id="cont_mejor_cat">
+		<a id="left_cat" href="javascript: prev('mejor_cat_child', 'div', 'right_cat', 'left_cat', 0, 3, 120);"></a>
+		<div id="mejor_cat">
+			<div id="mejor_cat_child">
+				<?php foreach($cate as $cat):?>
+					<div>
+						<h1>
+							<?php echo $cat[0] ?>
+						</h1>
+						<img src="/images/pruebas/home/<?php echo $cat[1] ?>.jpg" alt="categorias btag" />
+						<ol>
+							<?php foreach($cat[2] as $li): ?>
+								<li>
+									<?php echo $li[0]?>
+								</li>
+							<?php endforeach; ?>
+						</ol>
+					</div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+		<a id="right_cat" href="javascript: next('mejor_cat_child', 'div', 'right_cat', 'left_cat', 0, 3, 120);"></a>
+	</div>
+</div>
+
+<div id="ultimos_sitios">
+	<div class="titulo1">
+		<p>
+			Ultimos Sitios
+		</p>
+	</div>
+	
+	<?php foreach($sitios as $sit): ?>
+		<div class="info_sitios">
+			<img src="/images/tags/<?php echo $sit[0]?>s.png" alt="tag business tag" class ="tag1"/>
+			<a href="<?php echo url_for2('sitio', array('id' => $sit[1] ) ) ?>">
+				<img src="/images/pruebas/home/<?php echo $sit[2]?>.jpg" alt="tag business tag" class="img" />
+			</a>
+			<h1>
+				<?php echo $sit[3]?>
+			</h1>
+			<p>
+				<?php echo $sit[4]?>
+			</p>
+		</div>
+	<?php endforeach; ?>
+</div>
+
+<div id="categorias">
+	<div class="titulo1">
+		<p>
+			Categorias
+		</p>
+	</div>
+	<?php include_partial('cate', array('li_cate' => $li_cate))?>
+	<a id="ver_cate" class="ver_mas" href="<?php echo url_for('categoria') ?>"> ver más </a>
+</div>
+
+<div id="review_dia">
+	<div class="titulo2">
+		<img src="/images/tags/5s.png" alt="Review del día de business tag" />
+		<p>
+			Review del día
+		</p>
+	</div>
+	<div class="perfil">
+		<a href="<?php echo url_for2('perfil', array('id' => 'fernando_caviedes' ) ) ?>"  class="img">
+			<img src="/images/pruebas/home/perfil.jpg" alt=" Review de Fernando Caviedes"/>
+		</a>
+		<p>
+			Fernando Caviedes <br/>
+			20 Reviews
+		</p>
+	</div>
+	<div class="text_review">
+		<h1>
+			Restaurantes
+		</h1>
+		<p>
+			Praesent ornare libero et diam sagittis a scelerisque neque hendrerit. Donec id quam a nisl lobortis convallis. Vivamus eget velit at nisl laoreet faucibus. Sed faucibus suscipit est. Nunc vitae enim libero. Fusce non tellus nisi, ac accumsan erat. Suspendisse ac sapien erat, quis cursus ipsum...
+		</p>
+	</div>
+	<a id="leer_mas" href="">
+		>> Leer Más...
+	</a>
+</div>
+
+<div id="publi_hor">
+</div>
+
+<script type="text/javascript">
+	$('#cycle_home').before('<ul id="nav">').cycle({ 
+	    fx:      'fade', 
+	    speed: 2000,
+	    timeout:10000, 
+	    pager:  '#nav',
+
+	 // callback fn that creates a thumbnail to use as pager anchor 
+	    pagerAnchorBuilder: function(idx, slide) { 
+	        return '<li><a href="#"></a></li>'; 
+	    } 
+	});
+
+	$("#ultimos_sitios .info_sitios:nth-child(2)").css('margin-top', '7px');
+	$("#ultimos_sitios .info_sitios:nth-child(4)").css('border-bottom', 'none');
+</script>

@@ -1,0 +1,62 @@
+<?php foreach($coment as $i => $com):?>
+	<div class="coments">
+		<div class="perfil noBorder">
+			<img src="/images/tags/<?php echo $com[0]?>s.png" alt=" Calificación a <?php echo $com[1]?>" class="tag2" />
+			<a href="<?php echo url_for2('perfil', array('id' => $com[2] ) ) ?>" class="img">
+				<img src="/images/pruebas/home/<?php echo $com[3]?>" alt=" Review de <?php echo $com[4]?>"  />
+			</a>
+			
+			<p>
+				<?php echo $com[4]?> <br/>
+				<?php echo $com[5]?> <br/>
+				<?php echo $com[6]?> Reviews
+			</p>
+		</div>
+		<div class="text_review2">
+			<div class="header_coment">
+				<h3>
+					<?php echo $com[7]?>
+				</h3>
+				
+				<div class="adds">
+					<div>
+						2 check-ins aquí
+					</div>
+				</div>
+				<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Firidian.co&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+			</div>
+			<?php echo html_entity_decode($com[8])?>
+			<div class="footer_coment">
+				<div class="calificacion">
+					<div class="bt_cal">
+						<a href="">
+							Gracioso
+						</a>
+						<p>
+							(100)
+						</p>
+					</div>
+					<div class="bt_cal">
+						<a href="">
+							Util
+						</a>
+						<p>
+							(45)
+						</p>
+					</div>
+					<div class="bt_cal">
+						<a href="">
+							Divertido
+						</a>
+						<p>
+							(87)
+						</p>
+					</div>
+				</div>
+				<a href="javascript: showDueno(<?php echo ($i +1) ?>) " class="link_dueno">comentario del dueño [+]</a>
+				<?php include_partial('banner/owner_com', array('id' => ($i +1) ) )?>
+		</div>
+	</div>	
+<?php endforeach;?>	
+
+<a id="ver_com" class="ver_mas" href="">ver mas</a>
